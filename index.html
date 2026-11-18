@@ -54,10 +54,10 @@
       <div class="ilus reveal">
         <div class="device-preview-header">
           <div class="device-switch" role="group" aria-label="Dispositivo de la demostración" hidden>
-            <button type="button" data-device="laptop" aria-pressed="true">Laptop</button>
+            <button type="button" data-device="laptop" aria-pressed="true">PC</button>
             <button type="button" data-device="tablet" aria-pressed="false">Tablet</button>
           </div>
-          <div class="chip"><span class="chip-icon"><svg><use href="#i-diente"/></svg></span><div><b>Odontograma</b><small>a un clic</small></div></div>
+          <div class="chip view-chip"><span class="chip-icon"><svg><use href="#i-diente"/></svg></span><div class="chip-copy"><b data-view-title>Odontograma</b><small data-view-subtitle>vista clínica</small></div></div>
         </div>
         <div class="dental-laptop" data-device="laptop">
           <div class="dental-screen">
@@ -85,7 +85,7 @@
           </div>
           <div class="laptop-base"></div>
         </div>
-        <div class="chip"><span class="chip-icon"><svg><use href="#i-check"/></svg></span><div><b>Tratamiento guardado</b><small>en su expediente</small></div></div>
+        <div class="chip action-chip"><span class="chip-icon"><svg><use href="#i-check"/></svg></span><div class="chip-copy"><b data-action-title>Tratamiento guardado</b><small data-action-subtitle>en su expediente</small></div></div>
       </div>
     </div>
   </section>
@@ -133,6 +133,7 @@
           <div class="bubble b-in">Hola, ¿tienen espacio el jueves?</div>
           <div class="bubble b-out">¡Claro! Te agendé el jueves a las 3:00 p. m. ✓</div>
           <div class="bubble b-in">¡Gracias!</div>
+          <div class="typing" aria-hidden="true"><i></i><i></i><i></i></div>
         </div>
         <p class="step-n">Paso 01 · Contacto y agenda</p>
         <h3>Agenda fácil <strong>y confirmaciones automáticas.</strong></h3>
@@ -143,7 +144,7 @@
         <div class="art art-2" aria-hidden="true">
           <div class="mini-dental">
             <div class="mini-dental-heading"><b>Odontograma</b><span>● Actualizado</span></div>
-            <svg viewBox="0 0 420 100" class="dental-chart"><use href="#odontogram-preview"/></svg>
+            <div class="mini-teeth" aria-hidden="true"></div>
             <div class="mini-dental-saved"><svg><use href="#i-check"/></svg>Tratamiento registrado</div>
           </div>
         </div>
@@ -239,7 +240,7 @@
         </ol>
         <div class="hero-cta">
           <a class="btn btn-wa" href="https://wa.me/50370000000?text=Hola%2C%20quiero%20una%20demo%20de%20InciSoft" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg> 7000-0000</a>
-          <a class="btn btn-ghost" href="mailto:ventas@ejemplo.com?subject=Cotizaci%C3%B3n%20InciSoft">ventas@ejemplo.com</a>
+          <a class="btn btn-ghost" href="mailto:contacto@incisoftdental.com?subject=Cotizaci%C3%B3n%20InciSoft">contacto@incisoftdental.com</a>
         </div>
       </div>
       <form class="card form reveal" id="cotizar" novalidate>
@@ -287,7 +288,7 @@
 <footer class="foot">
   <div class="wrap foot-in">
     <img src="logo-blanco.png" alt="InciSoft" width="130" height="37" loading="lazy">
-    <p>Software para clínicas dentales · Tel. 2400-0000 · <a href="https://wa.me/50370000000" target="_blank" rel="noopener">WhatsApp 7000-0000</a> · <a href="mailto:ventas@ejemplo.com">ventas@ejemplo.com</a></p>
+    <p>Software para clínicas dentales · Tel. 2400-0000 · <a href="https://wa.me/50370000000" target="_blank" rel="noopener">WhatsApp 7000-0000</a> · <a href="mailto:contacto@incisoftdental.com">contacto@incisoftdental.com</a></p>
     <p>© <span id="anio">2026</span> InciSoft</p>
   </div>
 </footer>
