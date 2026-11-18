@@ -71,8 +71,9 @@ h1 strong { background: linear-gradient(90deg, var(--acento), var(--azul)); -web
 .hl { color: var(--azul); }
 .form label { display: block; font-size: .9rem; font-weight: 600; margin-bottom: 14px; }
 .form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.form input, .form select { display: block; width: 100%; margin-top: 6px; padding: 12px 14px; border: 1.5px solid var(--borde); border-radius: 12px; font: 500 1rem Quicksand, sans-serif; color: var(--texto); background: #fff; transition: border-color .2s, box-shadow .2s; }
-.form input:focus, .form select:focus { outline: 0; border-color: var(--azul); box-shadow: 0 0 0 4px rgba(26,155,234,.15); }
+.form input, .form select, .form textarea { display: block; width: 100%; margin-top: 6px; padding: 12px 14px; border: 1.5px solid var(--borde); border-radius: 12px; font: 500 1rem Quicksand, sans-serif; color: var(--texto); background: #fff; transition: border-color .2s, box-shadow .2s; }
+.form input:focus, .form select:focus, .form textarea:focus { outline: 0; border-color: var(--azul); box-shadow: 0 0 0 4px rgba(26,155,234,.15); }
+.form textarea { resize: vertical; }
 .form .invalid { border-color: #e5484d; }
 .form .check { display: flex; gap: 10px; align-items: flex-start; font-weight: 500; font-size: .82rem; color: var(--gris); }
 .form .check input { width: 18px; height: 18px; margin: 2px 0 0; flex: none; }
@@ -310,7 +311,7 @@ details p { padding: 0 24px 20px; color: var(--gris); }
   .form .row { gap: 0; }
   .sec { padding: 70px 0; }
   .brand img { width: 108px; }
-  .nav-btns .btn:last-child { display: none; } /* el hero ya trae "Pide tu demo" */
+  .nav-btns .btn:last-child { display: none; } /* el hero ya trae "Solicitar cotización" */
   .foot-in { flex-direction: column; text-align: center; }
 }
 @media (prefers-reduced-motion: reduce) {

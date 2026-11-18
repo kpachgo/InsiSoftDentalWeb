@@ -1,5 +1,6 @@
 // Correo y WhatsApp de contacto de InciSoft.
-const CORREO = 'contacto@incisoftdental.com';
+// Alias de FormSubmit para contacto@incisoftdental.com (oculta el correo a los bots)
+const FORM_ID = '3c0ac99a984a724d2e4ad822bdffaed3';
 const WA = '7000-0000';
 
 // Nav sólido al bajar
@@ -198,7 +199,7 @@ form.addEventListener('submit', async (e) => {
     const datos = Object.fromEntries(new FormData(form));
     datos._subject = `Cotización InciSoft · ${datos.clinica}`;
     datos._replyto = datos.correo;
-    const res = await fetch(`https://formsubmit.co/ajax/${CORREO}`, {
+    const res = await fetch(`https://formsubmit.co/ajax/${FORM_ID}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify(datos),
