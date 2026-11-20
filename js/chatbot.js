@@ -5,8 +5,8 @@ if (bot) {
   const log = bot.querySelector('.bot-log');
   const form = bot.querySelector('.bot-form');
   const send = form.querySelector('button[type="submit"]');
-  const SALUDO = '¡Hola! 👋 Soy el asistente de InciSoft. Cuéntame sobre tu clínica: ¿cuántos odontólogos trabajan y qué usan hoy para llevar los expedientes?';
-  const historial = [{ role: 'assistant', content: SALUDO }]; // la IA sabe qué preguntó al abrir
+  const SALUDO = '¡Hola! 👋 Soy el asistente de InciSoft. ¿En qué te puedo ayudar?';
+  const historial = []; // el saludo no va: si no, la IA cree que ya habló y dice "hola de nuevo"
   let leadEnviado = false;
 
   const say = (text, who) => {
