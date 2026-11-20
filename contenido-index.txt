@@ -1,0 +1,364 @@
+CONTENIDO TEXTUAL DE INDEX.HTML
+InciSoft Dental
+
+Documento de trabajo para reorganizar el mensaje comercial de la página.
+Versión 2: el mensaje principal es el expediente clínico digital y la operación
+completa de la clínica (recepción, consultorio, caja y seguimiento). El agente IA
+queda como una función complementaria.
+
+
+1. TEXTO SEO Y METADATOS
+
+Título de la página:
+InciSoft · Expediente clínico digital para clínicas dentales
+
+Descripción:
+Expediente clínico digital para clínicas dentales: historia clínica, odontograma, firmas, agenda y cobros, de la recepción al consultorio. Hecho desde la clínica.
+
+
+2. NAVEGACIÓN PRINCIPAL
+
+- Por qué InciSoft
+- Cómo funciona
+- Funciones
+- Planes
+- Preguntas
+- Iniciar sesión
+- Solicitar cotización
+
+
+3. INICIO / HERO
+
+Etiqueta destacada:
+Expediente clínico digital · De la recepción al consultorio
+
+Texto introductorio:
+Software dental · Hecho por quienes trabajan en clínicas
+
+Título principal:
+El expediente de tu clínica,
+digital y en orden.
+
+Descripción principal:
+Historia clínica, odontograma, radiografías, firmas y cobros de cada paciente en un solo expediente. Recepción agenda y recibe, el doctor registra y autoriza, caja cobra: cada quien trabaja en su parte y todo queda en el mismo lugar.
+
+Botones:
+- Solicitar cotización
+- Nuestros planes
+
+Mensajes de confianza:
+- Un expediente por paciente
+- Firma y sello del doctor
+- Tus datos seguros
+
+Texto de la ilustración de interfaz:
+- Odontograma
+- Vista clínica
+- Expediente digital
+- Paciente · Ficha 0248
+- Al día
+- Odontograma
+- Demo · Pulsa una pieza
+- Sin registro
+- Tratado
+- Pendiente
+- Historia clínica · Completa
+- Plan de tratamiento · Aprobado
+- Evolución · Registrada
+- Tratamiento guardado
+- En su expediente
+
+
+4. POR QUÉ INCISOFT
+
+Título:
+No lo hicimos desde una oficina. Lo hicimos desde la clínica.
+
+Texto de apoyo (nuevo):
+InciSoft nació para resolver el día a día de una clínica real: el paciente que llega sin cita, el abono que nadie anotó, la radiografía que no aparece y la firma que faltó en el expediente.
+
+Columna: Software genérico
+- Pensado por programadores que nunca atendieron un paciente
+- Tú te adaptas al sistema
+- El expediente queda repartido entre papel, Excel y fotos en el celular
+- Todos ven y modifican todo
+- Soporte que no entiende qué es una evolución o un abono
+
+Columna: InciSoft
+- Hecho por quienes trabajan todos los días dentro de clínicas
+- Sigue el flujo real: recepción, sala de espera, consulta, cobro y seguimiento
+- Un solo expediente por paciente: historia, odontograma, radiografías, citas y saldos
+- Cada rol ve lo suyo: marketing, recepción, asistente, doctor y administración
+- Soporte que habla tu idioma: el de la clínica
+
+Pilares:
+
+01 · Flujo real
+Cada pantalla responde a algo que pasa en la clínica, no a una idea de escritorio.
+
+02 · Te acompañamos
+Capacitamos a tu equipo hasta que trabajen solos y aumenten su productividad.
+
+03 · Escuchamos
+Las mejoras salen de lo que nos piden las clínicas que ya lo usan.
+
+
+5. RECORRIDO DEL PACIENTE / CÓMO FUNCIONA
+
+Título:
+Del primer contacto al alta, todo queda en el expediente.
+
+Paso 01 · Recepción y agenda
+
+Título:
+Recepción sabe quién viene, a qué y quién ya llegó.
+
+Descripción:
+Agenda por día y por mes con la carga de cada día a la vista. Marca a quién ya llamaste o escribiste, reprograma una cita arrastrándola y pasa al paciente a la sala de espera con su doctor asignado.
+
+Etiquetas:
+- Agenda por día y mes
+- Confirmación de citas
+- Sala de espera
+
+Texto de la ilustración (reemplaza el chat de WhatsApp):
+- Sala de espera · Hoy
+- María López · Limpieza · En espera
+- Juan Ramírez · Endodoncia · Atendido
+
+Paso 02 · Consulta y expediente
+
+Título:
+Toda la información clínica a la vista.
+
+Descripción:
+Historia clínica, alergias, odontograma con su historial, radiografías y fotos por álbum, diagnóstico y notas para la próxima cita. El doctor registra el tratamiento y lo autoriza con su firma y sello.
+
+Etiquetas:
+- Historia clínica
+- Odontograma
+- Radiografías
+- Firma y sello
+
+Texto de la ilustración:
+- Odontograma
+- Actualizado
+- Tratamiento autorizado
+
+Paso 03 · Cobro y seguimiento
+
+Título:
+El plan deja de ser una intención.
+
+Descripción:
+Presupuesto impreso desde el odontograma, abonos y saldos en cada cita y cierre de caja con conteo de billetes. Y cuando un paciente deja de venir, Seguimiento te dice a quién llamar.
+
+Etiquetas:
+- Presupuestos
+- Caja y cobros
+- Seguimiento de pacientes
+
+Texto de la ilustración:
+- Abono registrado ✓
+
+
+6. FUNCIONES
+
+Título:
+Todo el trabajo técnico de la clínica, en un solo sistema.
+
+Expediente clínico
+Datos personales, historia médica, alergias a la vista, diagnóstico, evolución y notas para la próxima cita.
+
+Odontograma digital
+Por pieza y superficie, con historial de cada versión. Nomenclatura casual o profesional, a gusto de tu clínica.
+
+Radiografías y fotos
+Ordenadas por álbum: radiografías, fotografías, exámenes y expediente físico escaneado.
+
+Firma, sello y autorización
+El paciente firma en pantalla y el doctor autoriza cada tratamiento con su firma y sello.
+
+Agenda y sala de espera
+Vista por día y por mes, confirmación de citas y la cola del día con el doctor asignado.
+
+Caja y cobros
+Abonos y saldos por paciente; efectivo, tarjeta, transferencia o seguro; cierre de caja diario.
+
+Impresiones y PDF
+Presupuesto, constancia de asistencia y expediente completo con odontograma, firmas y radiografías.
+
+Seguimiento de pacientes
+Quién no ha vuelto en 2 o 3 meses, a quién ya llamaste y quién tiene próxima cita.
+
+Accesos y privacidad
+Cada usuario con su rol y su contraseña. Protocolo para ocultar expedientes sensibles cuando lo necesites.
+
+También incluye (línea pequeña debajo de las tarjetas):
+Inventario y pedidos · Reporte mensual de ingresos · Agente IA en WhatsApp para agendar fuera de horario
+
+
+7. PLANES
+
+Título:
+Planes adaptados al tamaño y operación de tu clínica dental
+
+Plan Esencial
+Descripción:
+Para el consultorio que quiere dejar el papel y tener cada expediente en orden.
+
+Botón:
+Solicita tu cotización
+
+Incluye:
+- Expediente clínico e historia médica
+- Odontograma digital con historial
+- Radiografías y fotos por paciente
+- Firma del paciente y del doctor
+- Agenda y sala de espera
+- Presupuestos impresos
+- Control de caja y cobros
+
+Plan Pro
+Etiqueta:
+Recomendado
+
+Descripción:
+Para clínicas con varios doctores que necesitan orden entre recepción, consultorio y caja.
+
+Botón:
+Solicita tu cotización
+
+Incluye todo lo de Esencial, más:
+- Varios odontólogos con autorización de tratamientos
+- Reportes de gestión
+- Control de gastos
+- Recordatorios automáticos
+- Agente IA en WhatsApp
+
+Plan Premium
+Descripción:
+Para clínicas con varias sedes que buscan crecer y fidelizar.
+
+Botón:
+Solicita tu cotización
+
+Incluye todo lo de Pro, más:
+- Multisucursal
+- Seguimiento de pacientes
+- Inventario y pedidos
+- Capacitación personalizada
+- Soporte prioritario
+
+Nota:
+Pago mensual o anual · Tarjeta y transferencia · Aplican términos y condiciones
+
+
+8. PREGUNTAS FRECUENTES
+
+¿InciSoft sirve para mi consultorio, clínica o centro odontológico?
+Sí, desde el más pequeño hasta el más grande. El plan Esencial está pensado para el consultorio de un odontólogo, Pro para clínicas con varios doctores y Premium para centros odontológicos con varias sedes y equipos completos.
+
+¿Cómo trabaja cada persona del equipo?
+Cada quien entra con su usuario y ve solo la parte del programa que le toca. Toda la clínica trabaja sobre el mismo expediente: lo que uno registra le llega al siguiente, sin volver a escribir los datos.
+- Marketing o redes: si tu clínica tiene equipo de marketing, lo conectas. Agenda citas y contacta desde Seguimiento a los pacientes que no han vuelto, sin acceso a expedientes ni a la caja.
+- Recepción: confirma las citas, abre el expediente con los datos que ya venían de la agenda, pasa al paciente a la sala de espera y cobra sin volver a buscarlo.
+- Asistente: trabaja en el expediente, ve la sala de espera y lleva los pedidos de materiales.
+- Doctor: ve a sus pacientes en espera, registra el tratamiento y lo autoriza con su firma y sello.
+- Administración: ve toda la clínica y es quien puede hacer los borrados delicados.
+
+¿Qué documentos puedo imprimir?
+El expediente y mucho más, todo listo para imprimir o guardar en PDF:
+- Expediente completo: datos personales y clínicos, odontograma, tratamientos pendientes y realizados, diagnóstico, firma del paciente, registro de citas con firma y sello del doctor, radiografías y fotografías.
+- Presupuesto: con el logo y los datos de tu clínica, en media página o en hoja formal, con diagnóstico resumido desde el odontograma, tus precios, formas de pago, promociones o indicaciones, y firma y sello del odontólogo.
+- Constancia de asistencia: sencilla o formal con tu logo, con fecha, horario y tratamiento del paciente.
+- Documentos de tu clínica: sube tus propios formatos en PDF, como indicaciones o fichas, y los imprimes cuando los necesites.
+- Pedidos de inventario: listos en PDF para enviar al proveedor.
+
+¿Necesito instalar algo en mi computadora?
+No. Funciona desde el navegador en computadora, tablet o celular, incluso en equipos con varios años de uso. Solo necesitas internet.
+
+¿Cuánto cuesta InciSoft?
+Depende del plan y del número de odontólogos. Llena el formulario o escríbenos por WhatsApp y te enviamos tu cotización el mismo día.
+
+
+9. CONTACTO Y COTIZACIÓN
+
+Título:
+¿Listo para ordenar tu clínica?
+
+Descripción:
+Déjanos tus datos y te enviamos tu cotización.
+
+Proceso:
+1. Te contactamos el mismo día
+2. Te enviamos tu cotización a la medida
+3. Capacitamos a tu equipo para arrancar
+
+Canales de contacto:
+- WhatsApp: 7000-0000
+- Correo: contacto@incisoftdental.com
+
+Título del formulario:
+Solicita tu cotización
+
+Campos del formulario:
+- Nombre *
+- Apellido *
+- Teléfono / WhatsApp *
+  Placeholder: 7000 0000
+- Correo electrónico *
+- Nombre de la clínica *
+- Tu cargo *
+  Opciones:
+  - Selecciona una opción
+  - Odontólogo/a dueño/a
+  - Odontólogo/a
+  - Administración
+  - Recepción / asistente
+- Nº de odontólogos *
+  Opciones:
+  - Selecciona
+  - 1
+  - 2 a 4
+  - 5 a 10
+  - Más de 10
+- Plan de interés
+  Opciones:
+  - Aún no sé
+  - Esencial
+  - Pro
+  - Premium
+- Comentarios
+  Placeholder: Cuéntanos qué necesitas o cualquier duda sobre tu cotización
+- Acepto que InciSoft me contacte por teléfono, WhatsApp o correo para enviarme la cotización.
+
+Botón del formulario:
+Quiero cotizar
+
+
+10. PIE DE PÁGINA
+
+Expediente clínico digital para clínicas dentales · Tel. 2400-0000 · WhatsApp 7000-0000 · contacto@incisoftdental.com
+
+© 2026 InciSoft
+
+
+11. TEXTO DE ACCESIBILIDAD Y APOYO
+
+- InciSoft, inicio
+- Dispositivo de la demostración
+- Escríbenos por WhatsApp
+
+
+12. CAMBIOS DE ESTA VERSIÓN (para pasarlos a index.html)
+
+- La IA sale del hero, de los mensajes de confianza y del paso 01 del recorrido.
+  Queda en la línea "También incluye" de Funciones y en el plan Pro.
+- Paso 01: la ilustración del chat de WhatsApp cambia por la sala de espera del día.
+- Funciones: pasa de 6 a 9 tarjetas, más una línea "También incluye".
+- Plan Premium: "Seguimiento de presupuestos" cambia a "Seguimiento de pacientes",
+  que es lo que hace el módulo de Seguimiento del sistema.
+- Preguntas: se agregan la de roles y la de documentos para imprimir. Se quitan la de
+  migración de datos (no sabemos qué datos trae cada clínica) y la de seguridad (decía de más).
+- Ya no se promete migrar pacientes: se quitó del pilar 02 y del paso 3 del contacto.

@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InciSoft · Expediente clínico digital para clínicas dentales</title>
+  <meta name="description" content="Expediente clínico digital para clínicas dentales: historia clínica, odontograma, firmas, agenda y cobros, de la recepción al consultorio. Hecho desde la clínica.">
+  <meta name="theme-color" content="#0B1E40">
+  <link rel="icon" href="logo-color.png">
+  <link rel="preload" href="fuentes/Quicksand-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Solo de esta versión: texto de apoyo y sala de espera del paso 01 */
+    .title-sub { margin: -28px 0 48px; max-width: 760px; color: var(--gris); font-size: 1.08rem; }
+    .cola-h { display: flex; justify-content: space-between; font-size: .82rem; font-weight: 700; }
+    .cola-h span { opacity: .8; font-weight: 600; }
+    .cola-row { display: flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 12px; background: rgba(255,255,255,.14); font-size: .8rem; white-space: nowrap; opacity: 0; transform: translateY(10px); }
+    .cola-row b { font-weight: 700; }
+    .cola-row small { opacity: .8; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+    .cola-row em { margin-left: auto; font-style: normal; font-weight: 700; font-size: .72rem; padding: 2px 9px; border-radius: 999px; background: #ffe7a8; color: #6b4a00; white-space: nowrap; }
+    .cola-row em.ok { background: #c9f5dc; color: #135c34; }
+    .visible .cola-row { animation: chat-message 8s ease-in-out infinite; }
+    .visible .cola-row:nth-child(3) { animation-delay: 1.2s; }
+    .visible .cola-row:nth-child(4) { animation-delay: 2.4s; }
+    details p.antes-lista { padding-bottom: 10px; }
+    details ul { padding: 0 24px 20px 44px; color: var(--gris); display: grid; gap: 8px; }
+    details li b { color: var(--texto); }
+    @media (prefers-reduced-motion: reduce) { .cola-row { opacity: 1; transform: none; animation: none !important; } }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#inicio" class="brand" aria-label="InciSoft, inicio"><img src="logo-blanco.png" alt="InciSoft" width="132" height="38"></a>
+    <nav class="links" aria-label="Principal">
+      <a href="#por-que">Por qué InciSoft</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#funciones">Funciones</a>
+      <a href="#planes">Planes</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <div class="nav-btns">
+      <a class="btn btn-sm btn-ghost" href="https://app.incisoftdental.com/">Iniciar sesión</a>
+      <a class="btn btn-sm" href="#cotizar">Solicitar cotización</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="glow g1"></div><div class="glow g2"></div>
+    <div class="wrap hero-in">
+      <div class="hero-txt">
+        <p class="pill reveal"><span>Expediente clínico digital</span> De la recepción al consultorio</p>
+        <p class="kicker reveal">Software dental · Hecho por quienes trabajan en clínicas</p>
+        <h1 class="reveal">El expediente de tu clínica, <br><strong>digital y en orden.</strong></h1>
+        <p class="lead reveal">Historia clínica, odontograma, radiografías, firmas y cobros de cada paciente en un solo expediente. Recepción agenda y recibe, el doctor registra y autoriza, caja cobra: cada quien trabaja en su parte y todo queda en el mismo lugar.</p>
+        <div class="hero-cta reveal">
+          <a class="btn" href="#cotizar">Solicitar cotización</a>
+          <a class="btn btn-ghost" href="#planes">Nuestros planes</a>
+        </div>
+        <ul class="trust reveal">
+          <li><svg aria-hidden="true"><use href="#i-ficha"/></svg>Un expediente por paciente</li>
+          <li><svg aria-hidden="true"><use href="#i-firma"/></svg>Firma y sello del doctor</li>
+          <li><svg aria-hidden="true"><use href="#i-escudo"/></svg>Tus datos seguros</li>
+        </ul>
+      </div>
+
+      <!-- Ilustración de interfaz, inspirada en la publicidad; no es una captura del software -->
+      <div class="ilus reveal">
+        <div class="device-preview-header">
+          <div class="device-switch" role="group" aria-label="Dispositivo de la demostración" hidden>
+            <button type="button" data-device="laptop" aria-pressed="true">PC</button>
+            <button type="button" data-device="tablet" aria-pressed="false">Tablet</button>
+          </div>
+          <div class="chip view-chip"><span class="chip-icon"><svg><use href="#i-diente"/></svg></span><div class="chip-copy"><b data-view-title>Odontograma</b><small data-view-subtitle>vista clínica</small></div></div>
+        </div>
+        <div class="dental-laptop" data-device="laptop">
+          <div class="dental-screen">
+            <div class="screen-toolbar"><span></span><i></i><b></b></div>
+            <div class="screen-layout">
+              <div class="screen-sidebar"><i></i><i class="active"></i><i></i><i></i><i></i><i></i></div>
+              <div class="exp">
+                <div class="exp-top">
+                  <span class="avatar"><svg><use href="#i-ficha"/></svg></span>
+                  <div><b>Expediente digital</b><small>Paciente · Ficha 0248</small></div>
+                  <span class="ok">Al día</span>
+                </div>
+                <div class="odontogram-panel" role="group" aria-labelledby="odontogram-title" aria-describedby="odontogram-legend">
+                  <div class="odontogram-heading"><b id="odontogram-title">Odontograma</b><span id="odontogram-hint" hidden>Demo · Pulsa una pieza</span></div>
+                  <svg viewBox="0 0 420 100" class="dental-chart" aria-hidden="true"><use href="#odontogram-preview"/></svg>
+                  <div id="odontogram-legend" class="chart-legend"><span><i></i>Sin registro</span><span><i></i>Tratado</span><span><i></i>Pendiente</span></div>
+                </div>
+                <ul class="tl">
+                  <li><i></i><span>Historia clínica</span><em>Completa</em></li>
+                  <li><i></i><span>Plan de tratamiento</span><em>Aprobado</em></li>
+                  <li><i></i><span>Evolución</span><em>Registrada</em></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
+        </div>
+        <div class="chip action-chip"><span class="chip-icon"><svg><use href="#i-check"/></svg></span><div class="chip-copy"><b data-action-title>Tratamiento guardado</b><small data-action-subtitle>en su expediente</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ INCISOFT -->
+  <section class="sec" id="por-que">
+    <div class="wrap">
+      <h2 class="title reveal">No lo hicimos desde una oficina. <strong>Lo hicimos desde la clínica.</strong></h2>
+      <p class="title-sub reveal">InciSoft nació para resolver el día a día de una clínica real: el paciente que llega sin cita, el abono que nadie anotó, la radiografía que no aparece y la firma que faltó en el expediente.</p>
+      <div class="vs">
+        <div class="vs-col reveal">
+          <p class="vs-h">Software genérico</p>
+          <ul>
+            <li>Pensado por programadores que nunca atendieron un paciente</li>
+            <li>Tú te adaptas al sistema</li>
+            <li>El expediente queda repartido entre papel, Excel y fotos en el celular</li>
+            <li>Todos ven y modifican todo</li>
+            <li>Soporte que no entiende qué es una evolución o un abono</li>
+          </ul>
+        </div>
+        <div class="vs-col vs-in reveal">
+          <p class="vs-h">InciSoft</p>
+          <ul>
+            <li>Hecho por quienes trabajan todos los días dentro de clínicas</li>
+            <li>Sigue el flujo real: recepción, sala de espera, consulta, cobro y seguimiento</li>
+            <li>Un solo expediente por paciente: historia, odontograma, radiografías, citas y saldos</li>
+            <li>Cada rol ve lo suyo: marketing, recepción, asistente, doctor y administración</li>
+            <li>Soporte que habla tu idioma: el de la clínica</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pilares">
+        <div class="reveal"><b>01</b><h3>Flujo real</h3><p>Cada pantalla responde a algo que pasa en la clínica, no a una idea de escritorio.</p></div>
+        <div class="reveal"><b>02</b><h3>Te acompañamos</h3><p>Capacitamos a tu equipo hasta que trabajen solos y aumenten su productividad.</p></div>
+        <div class="reveal"><b>03</b><h3>Escuchamos</h3><p>Las mejoras salen de lo que nos piden las clínicas que ya lo usan.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECORRIDO DEL PACIENTE -->
+  <section class="sec" id="como-funciona">
+    <div class="wrap">
+      <h2 class="title reveal">Del primer contacto al alta, <strong>todo queda en el expediente.</strong></h2>
+    </div>
+    <div class="wrap steps">
+      <article class="step reveal">
+        <div class="art art-1" aria-hidden="true">
+          <div class="cola-h">Sala de espera · Hoy <span>3 pacientes</span></div>
+          <div class="cola-row"><b>María López</b><small>Limpieza</small><em>En espera</em></div>
+          <div class="cola-row"><b>Juan Ramírez</b><small>Endodoncia</small><em class="ok">Atendido</em></div>
+          <div class="cola-row"><b>Ana Martínez</b><small>Evaluación</small><em>En espera</em></div>
+        </div>
+        <p class="step-n">Paso 01 · Recepción y agenda</p>
+        <h3>Recepción sabe quién viene, <strong>a qué y quién ya llegó.</strong></h3>
+        <p>Agenda por día y por mes con la carga de cada día a la vista. Marca a quién ya llamaste o escribiste, reprograma una cita arrastrándola y pasa al paciente a la sala de espera con su doctor asignado.</p>
+        <ul class="tags"><li>Agenda por día y mes</li><li>Confirmación de citas</li><li>Sala de espera</li></ul>
+      </article>
+      <article class="step reveal">
+        <div class="art art-2" aria-hidden="true">
+          <div class="mini-dental">
+            <div class="mini-dental-heading"><b>Odontograma</b><span>● Actualizado</span></div>
+            <div class="mini-teeth" aria-hidden="true"></div>
+            <div class="mini-dental-saved"><svg><use href="#i-check"/></svg>Tratamiento autorizado</div>
+          </div>
+        </div>
+        <p class="step-n">Paso 02 · Consulta y expediente</p>
+        <h3>Toda la información <strong>clínica a la vista.</strong></h3>
+        <p>Historia clínica, alergias, odontograma con su historial, radiografías y fotos por álbum, diagnóstico y notas para la próxima cita. El doctor registra el tratamiento y lo autoriza con su firma y sello.</p>
+        <ul class="tags"><li>Historia clínica</li><li>Odontograma</li><li>Radiografías</li><li>Firma y sello</li></ul>
+      </article>
+      <article class="step reveal">
+        <div class="art art-3" aria-hidden="true">
+          <div class="bar"><span style="--w:100%"></span></div>
+          <div class="bar"><span style="--w:72%"></span></div>
+          <div class="bar"><span style="--w:45%"></span></div>
+          <p class="paid">Abono registrado ✓</p>
+        </div>
+        <p class="step-n">Paso 03 · Cobro y seguimiento</p>
+        <h3>El plan deja <strong>de ser una intención.</strong></h3>
+        <p>Presupuesto impreso desde el odontograma, abonos y saldos en cada cita y cierre de caja con conteo de billetes. Y cuando un paciente deja de venir, Seguimiento te dice a quién llamar.</p>
+        <ul class="tags"><li>Presupuestos</li><li>Caja y cobros</li><li>Seguimiento de pacientes</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- FUNCIONES -->
+  <section class="sec sec-soft" id="funciones">
+    <div class="wrap">
+      <h2 class="title reveal"><strong>Todo el trabajo técnico de la clínica,</strong> en un solo sistema.</h2>
+      <div class="grid">
+        <div class="feat reveal"><svg aria-hidden="true"><use href="#i-ficha"/></svg><h3>Expediente clínico</h3><p>Datos personales, historia médica, alergias a la vista, diagnóstico, evolución y notas para la próxima cita.</p></div>
+        <div class="feat reveal"><svg aria-hidden="true"><use href="#i-diente"/></svg><h3>Odontograma digital</h3><p>Por pieza y superficie, con historial de cada versión. Nomenclatura casual o profesional, a gusto de tu clínica.</p></div>
+        <div class="feat reveal"><svg aria-hidden="true"><use href="#i-foto"/></svg><h3>Radiografías y fotos</h3><p>Ordenadas por álbum: radiografías, fotografías, exámenes y expediente físico escaneado.</p></div>
+        <div class="feat reveal"><svg aria-hidden="true"><use href="#i-firma"/></svg><h3>Firma, sello y autorización</h3><p>El paciente firma en pantalla y el doctor autoriza cada tratamiento con su firma y sello.</p></div>
+        <div class="feat reveal"><svg aria-hidden="true"><use href="#i-reloj"/></svg><h3>Agenda y sala de espera</h3><p>Vista por día y por mes, confirmación de citas y la cola del día con el doctor asignado.</p></div>
+        <div class="feat reveal"><svg aria-hidden="true"><use href="#i-caja"/></svg><h3>Caja y cobros</h3><p>Abonos y saldos por paciente; efectivo, tarjeta, transferencia o seguro; cierre de caja diario.</p></div>
+        <div class="feat reveal"><svg aria-hidden="true"><use href="#i-impresora"/></svg><h3>Impresiones y PDF</h3><p>Presupuesto, constancia de asistencia y expediente completo con odontograma, firmas y radiografías.</p></div>
+        <div class="feat reveal"><svg aria-hidden="true"><use href="#i-telefono"/></svg><h3>Seguimiento de pacientes</h3><p>Quién no ha vuelto en 2 o 3 meses, a quién ya llamaste y quién tiene próxima cita.</p></div>
+        <div class="feat reveal"><svg aria-hidden="true"><use href="#i-escudo"/></svg><h3>Accesos y privacidad</h3><p>Cada usuario con su rol y su contraseña. Protocolo para ocultar expedientes sensibles cuando lo necesites.</p></div>
+      </div>
+      <p class="note reveal">También incluye: Inventario y pedidos · Reporte mensual de ingresos · Agente IA en WhatsApp para agendar fuera de horario</p>
+    </div>
+  </section>
+
+  <!-- PLANES -->
+  <section class="sec" id="planes">
+    <div class="wrap">
+      <h2 class="title reveal"><strong>Planes adaptados</strong> al tamaño y operación de tu clínica dental</h2>
+      <div class="plans">
+        <article class="plan reveal">
+          <h3>Esencial</h3>
+          <p>Para el consultorio que quiere dejar el papel y tener cada expediente en orden.</p>
+          <a class="btn btn-full" href="#cotizar" data-plan="Esencial">Solicita tu cotización</a>
+          <p class="inc">Incluye:</p>
+          <ul><li>Expediente clínico e historia médica</li><li>Odontograma digital con historial</li><li>Radiografías y fotos por paciente</li><li>Firma del paciente y del doctor</li><li>Agenda y sala de espera</li><li>Presupuestos impresos</li><li>Control de caja y cobros</li></ul>
+        </article>
+        <article class="plan plan-pro reveal">
+          <span class="badge">Recomendado</span>
+          <h3>Pro</h3>
+          <p>Para clínicas con varios doctores que necesitan orden entre recepción, consultorio y caja.</p>
+          <a class="btn btn-full btn-light" href="#cotizar" data-plan="Pro">Solicita tu cotización</a>
+          <p class="inc">Todo lo de Esencial, más:</p>
+          <ul><li>Varios odontólogos con autorización de tratamientos</li><li>Reportes de gestión</li><li>Control de gastos</li><li>Recordatorios automáticos</li><li>Agente IA en WhatsApp</li></ul>
+        </article>
+        <article class="plan reveal">
+          <h3>Premium</h3>
+          <p>Para clínicas con varias sedes que buscan crecer y fidelizar.</p>
+          <a class="btn btn-full" href="#cotizar" data-plan="Premium">Solicita tu cotización</a>
+          <p class="inc">Todo lo de Pro, más:</p>
+          <ul><li>Multisucursal</li><li>Seguimiento de pacientes</li><li>Inventario y pedidos</li><li>Capacitación personalizada</li><li>Soporte prioritario</li></ul>
+        </article>
+      </div>
+      <p class="note reveal">Pago mensual o anual · Tarjeta y transferencia · Aplican términos y condiciones</p>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS -->
+  <section class="sec sec-soft" id="preguntas">
+    <div class="wrap narrow">
+      <h2 class="title reveal"><strong>Preguntas frecuentes</strong></h2>
+      <details class="reveal"><summary>¿InciSoft sirve para mi consultorio, clínica o centro odontológico?</summary><p>Sí, desde el más pequeño hasta el más grande. El plan Esencial está pensado para el consultorio de un odontólogo, Pro para clínicas con varios doctores y Premium para centros odontológicos con varias sedes y equipos completos.</p></details>
+      <details class="reveal"><summary>¿Cómo trabaja cada persona del equipo?</summary>
+        <p class="antes-lista">Cada quien entra con su usuario y ve solo la parte del programa que le toca. Toda la clínica trabaja sobre el mismo expediente: lo que uno registra le llega al siguiente, sin volver a escribir los datos.</p>
+        <ul>
+          <li><b>Marketing o redes:</b> si tu clínica tiene equipo de marketing, lo conectas. Agenda citas y contacta desde Seguimiento a los pacientes que no han vuelto, sin acceso a expedientes ni a la caja.</li>
+          <li><b>Recepción:</b> confirma las citas, abre el expediente con los datos que ya venían de la agenda, pasa al paciente a la sala de espera y cobra sin volver a buscarlo.</li>
+          <li><b>Asistente:</b> trabaja en el expediente, ve la sala de espera y lleva los pedidos de materiales.</li>
+          <li><b>Doctor:</b> ve a sus pacientes en espera, registra el tratamiento y lo autoriza con su firma y sello.</li>
+          <li><b>Administración:</b> ve toda la clínica y es quien puede hacer los borrados delicados.</li>
+        </ul>
+      </details>
+      <details class="reveal"><summary>¿Qué documentos puedo imprimir?</summary>
+        <p class="antes-lista">El expediente y mucho más, todo listo para imprimir o guardar en PDF:</p>
+        <ul>
+          <li><b>Expediente completo:</b> datos personales y clínicos, odontograma, tratamientos pendientes y realizados, diagnóstico, firma del paciente, registro de citas con firma y sello del doctor, radiografías y fotografías.</li>
+          <li><b>Presupuesto:</b> con el logo y los datos de tu clínica, en media página o en hoja formal, con diagnóstico resumido desde el odontograma, tus precios, formas de pago, promociones o indicaciones, y firma y sello del odontólogo.</li>
+          <li><b>Constancia de asistencia:</b> sencilla o formal con tu logo, con fecha, horario y tratamiento del paciente.</li>
+          <li><b>Documentos de tu clínica:</b> sube tus propios formatos en PDF, como indicaciones o fichas, y los imprimes cuando los necesites.</li>
+          <li><b>Pedidos de inventario:</b> listos en PDF para enviar al proveedor.</li>
+        </ul>
+      </details>
+      <details class="reveal"><summary>¿Necesito instalar algo en mi computadora?</summary><p>No. Funciona desde el navegador en computadora, tablet o celular, incluso en equipos con varios años de uso. Solo necesitas internet.</p></details>
+      <details class="reveal"><summary>¿Cuánto cuesta InciSoft?</summary><p>Depende del plan y del número de odontólogos. Llena el formulario o escríbenos por WhatsApp y te enviamos tu cotización el mismo día.</p></details>
+    </div>
+  </section>
+
+  <!-- CONTACTO + FORMULARIO -->
+  <section class="cta" id="contacto">
+    <div class="wrap cta-in">
+      <div class="cta-txt reveal">
+        <h2>¿Listo para ordenar tu clínica?</h2>
+        <p>Déjanos tus datos y te enviamos tu cotización.</p>
+        <ol class="pasos">
+          <li><b>1</b>Te contactamos el mismo día</li>
+          <li><b>2</b>Te enviamos tu cotización a la medida</li>
+          <li><b>3</b>Capacitamos a tu equipo para arrancar</li>
+        </ol>
+        <div class="hero-cta">
+          <a class="btn btn-wa" href="https://wa.me/50370000000?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20de%20InciSoft" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg> 7000-0000</a>
+          <a class="btn btn-ghost" href="mailto:contacto@incisoftdental.com?subject=Cotizaci%C3%B3n%20InciSoft">contacto@incisoftdental.com</a>
+        </div>
+      </div>
+      <form class="card form reveal" id="cotizar" novalidate>
+        <h2><span class="hl">Solicita</span> tu <span class="hl">cotización</span></h2>
+        <div class="row">
+          <label>Nombre *<input name="nombre" required autocomplete="given-name"></label>
+          <label>Apellido *<input name="apellido" required autocomplete="family-name"></label>
+        </div>
+        <div class="row">
+          <label>Teléfono / WhatsApp *<input name="telefono" type="tel" required autocomplete="tel" placeholder="7000 0000"></label>
+          <label>Correo electrónico *<input name="correo" type="email" required autocomplete="email"></label>
+        </div>
+        <label>Nombre de la clínica *<input name="clinica" required autocomplete="organization"></label>
+        <div class="row">
+          <label>Tu cargo *
+            <select name="cargo" required>
+              <option value="">Selecciona una opción</option>
+              <option>Odontólogo/a dueño/a</option>
+              <option>Odontólogo/a</option>
+              <option>Administración</option>
+              <option>Recepción / asistente</option>
+            </select>
+          </label>
+          <label>Nº de odontólogos *
+            <select name="odontologos" required>
+              <option value="">Selecciona</option>
+              <option>1</option><option>2 a 4</option><option>5 a 10</option><option>Más de 10</option>
+            </select>
+          </label>
+        </div>
+        <label>Plan de interés
+          <select name="plan">
+            <option>Aún no sé</option><option>Esencial</option><option>Pro</option><option>Premium</option>
+          </select>
+        </label>
+        <label>Comentarios<textarea name="comentario" rows="4" maxlength="1000" placeholder="Cuéntanos qué necesitas o cualquier duda sobre tu cotización"></textarea></label>
+        <label class="check"><input type="checkbox" name="acepto" required> Acepto que InciSoft me contacte por teléfono, WhatsApp o correo para enviarme la cotización.</label>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-full" type="submit">Quiero cotizar</button>
+        <p class="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <img src="logo-blanco.png" alt="InciSoft" width="130" height="37" loading="lazy">
+    <p>Expediente clínico digital para clínicas dentales · Tel. 2400-0000 · <a href="https://wa.me/50370000000" target="_blank" rel="noopener">WhatsApp 7000-0000</a> · <a href="mailto:contacto@incisoftdental.com">contacto@incisoftdental.com</a></p>
+    <p>© <span id="anio">2026</span> InciSoft</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/50370000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20InciSoft" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<!-- Íconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="odontogram-preview" viewBox="0 0 420 100">
+      <rect x="3" y="6" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="28" y="6" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="53" y="6" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="78" y="6" width="19" height="33" rx="8" fill="#d5efff" stroke="#1a9bea" stroke-width="1.2"/>
+      <rect x="103" y="6" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="128" y="6" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="153" y="6" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="178" y="6" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="215" y="6" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="240" y="6" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="265" y="6" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="290" y="6" width="19" height="33" rx="8" fill="#fff0f1" stroke="#ed777e" stroke-width="1.2"/>
+      <rect x="315" y="6" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="340" y="6" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="365" y="6" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="390" y="6" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="3" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="28" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="53" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="78" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="103" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="128" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="153" y="59" width="19" height="33" rx="8" fill="#d5efff" stroke="#1a9bea" stroke-width="1.2"/>
+      <rect x="178" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="215" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="240" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="265" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="290" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="315" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="340" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="365" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+      <rect x="390" y="59" width="19" height="33" rx="8" fill="#ffffff" stroke="#bacce1" stroke-width="1.2"/>
+  </symbol>
+  <symbol id="i-diente" viewBox="0 0 24 24"><path d="M12 5C8 2 3 4 4 10c.5 3 2 10 4 10 2 0 1-6 4-6s2 6 4 6c2 0 3.5-7 4-10 1-6-4-8-8-5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-ficha" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9 8h6M9 12h6M9 16h3"/></symbol>
+  <symbol id="i-caja" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-foto" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="10" r="1.8" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="m3 17 5-4 4 3 3-2 6 4"/></symbol>
+  <symbol id="i-firma" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 4.5 19.5 9 9 19.5H4.5V15L15 4.5ZM3 22h18"/></symbol>
+  <symbol id="i-impresora" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M7 9V3h10v6M7 17H4v-7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v7h-3M7 14h10v7H7z"/></symbol>
+  <symbol id="i-telefono" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></symbol>
+</svg>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

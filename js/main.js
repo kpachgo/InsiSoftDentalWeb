@@ -117,8 +117,8 @@ const viewSequence = [
   ['Doctores', 'equipo clínico', 'Doctor asignado', 'a la cita'],
   ['Servicios', 'catálogo de atención', 'Servicio actualizado', 'en el catálogo'],
   ['Cobros', 'caja y saldos', 'Abono registrado', 'saldo actualizado'],
-  ['Seguimientos', 'control del paciente', 'Recordatorio enviado', 'a su paciente'],
-  ['Inventario', 'insumos de clínica', 'Existencia actualizada', 'stock registrado'],
+  ['Seguimientos', 'control del paciente', 'Paciente contactado', 'llamada registrada'],
+  ['Inventario', 'insumos de clínica', 'Pedido generado', 'listo para enviar'],
 ];
 const updateViewChips = () => {
   viewIndex = (viewIndex + 1) % viewSequence.length;
