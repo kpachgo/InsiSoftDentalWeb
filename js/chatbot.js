@@ -1,6 +1,6 @@
 // Asistente de preguntas frecuentes: respuestas predefinidas, sin IA.
 // Las preguntas viven en chatbot-preguntas.txt (formato explicado dentro del archivo).
-const WA_URL = 'https://wa.me/50370000000?text=';
+const WA_URL = 'https://wa.me/50372682797?text=';
 const WA_LINK = '<a href="' + WA_URL + 'Hola%2C%20tengo%20una%20pregunta%20sobre%20InciSoft" target="_blank" rel="noopener">pregúntanos por WhatsApp</a>';
 const FALLBACK = 'No tengo esa respuesta todavía. Prueba con otras palabras o ' + WA_LINK + '.';
 const SUGERENCIAS = 3; // cuántas preguntas sugeridas se ven a la vez

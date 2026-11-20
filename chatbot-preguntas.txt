@@ -91,7 +91,7 @@ Por eso cada pantalla responde a algo que pasa en tu clínica. 😉
 P: ¿Dónde están ubicados?
 C: ubicacion, ubicados, donde, direccion, oficina, pais, ciudad, visitar, local
 R: InciSoft funciona <b>100% en línea</b>: lo usas desde tu clínica, esté donde esté, sin instalar nada.
-Te atendemos por <a href="https://wa.me/50370000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20InciSoft" target="_blank" rel="noopener">WhatsApp 7000-0000</a>, al teléfono 2400-0000 o al correo contacto@incisoftdental.com.
+Te atendemos por <a href="https://wa.me/50372682797?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20InciSoft" target="_blank" rel="noopener">WhatsApp 7268-2797</a> o al correo contacto@incisoftdental.com.
 # PENDIENTE: si quieres mostrar ciudad o dirección, agrégala aquí arriba.
 
 P: ¿Sirve para mi consultorio?
@@ -293,7 +293,7 @@ En Premium la capacitación es personalizada. Y como lo diseñamos con el flujo 
 P: ¿Qué soporte tienen?
 C: soporte, ayuda, problema, falla, asistencia, atencion, contacto
 R: Te atiende gente que <b>habla el idioma de la clínica</b>: sabe qué es una evolución o un abono.
-Escríbenos por <a href="https://wa.me/50370000000?text=Hola%2C%20necesito%20ayuda%20con%20InciSoft" target="_blank" rel="noopener">WhatsApp 7000-0000</a> o a contacto@incisoftdental.com. En Premium tienes soporte prioritario.
+Escríbenos por <a href="https://wa.me/50372682797?text=Hola%2C%20necesito%20ayuda%20con%20InciSoft" target="_blank" rel="noopener">WhatsApp 7268-2797</a> o a contacto@incisoftdental.com. En Premium tienes soporte prioritario.
 
 P: ¿Pueden pasar mis pacientes al sistema?
 C: migrar, migracion, pasar, importar, cargar, base, existentes, mis pacientes
@@ -310,14 +310,13 @@ R: Es muy sencillo:
 
 P: Quiero una cotización
 C: cotizacion, cotizar, comprar, demo, asesor, vendedor, informacion, interesa
-R: ¡Con gusto! Llena el <a href="#cotizar">formulario de cotización</a> y te contactamos el mismo día, o <a href="https://wa.me/50370000000?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20de%20InciSoft" target="_blank" rel="noopener">escríbenos por WhatsApp</a>.
+R: ¡Con gusto! Llena el <a href="#cotizar">formulario de cotización</a> y te contactamos el mismo día, o <a href="https://wa.me/50372682797?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20de%20InciSoft" target="_blank" rel="noopener">escríbenos por WhatsApp</a>.
 Tip: dinos cuántos odontólogos y sedes tienes para darte el precio exacto.
 
 P: ¿Cómo los contacto?
 C: contactar, telefono, numero, llamar, correo, email, escribir, comunicar
 R: Por donde prefieras:
-📲 <a href="https://wa.me/50370000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20InciSoft" target="_blank" rel="noopener">WhatsApp 7000-0000</a>
-☎️ Teléfono 2400-0000
+📲 <a href="https://wa.me/50372682797?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20InciSoft" target="_blank" rel="noopener">WhatsApp 7268-2797</a>
 ✉️ <a href="mailto:contacto@incisoftdental.com">contacto@incisoftdental.com</a>
 O deja tus datos en el <a href="#cotizar">formulario</a> y te llamamos el mismo día.
 
@@ -334,16 +333,16 @@ C: adios, chao, bye, nos vemos, hasta luego
 R: ¡Hasta pronto! Aquí estaré si te surge otra duda. 👋
 
 C: robot, humano, persona, real, bot, eres
-R: Soy un asistente automático con respuestas preparadas por el equipo de InciSoft. Si prefieres hablar con una persona, <a href="https://wa.me/50370000000?text=Hola%2C%20quiero%20hablar%20con%20alguien%20de%20InciSoft" target="_blank" rel="noopener">escríbenos por WhatsApp</a>.
+R: Soy un asistente automático con respuestas preparadas por el equipo de InciSoft. Si prefieres hablar con una persona, <a href="https://wa.me/50372682797?text=Hola%2C%20quiero%20hablar%20con%20alguien%20de%20InciSoft" target="_blank" rel="noopener">escríbenos por WhatsApp</a>.
 
 C: entendi, entiendo, explicar, explica, detalle, detalles, mas info
-R: Te puedo dar más detalle sobre {tema} por <a href="https://wa.me/50370000000?text=Hola%2C%20quiero%20m%C3%A1s%20detalles%20de%20InciSoft" target="_blank" rel="noopener">WhatsApp</a>, o puedes elegir otra pregunta de abajo.
+R: Te puedo dar más detalle sobre {tema} por <a href="https://wa.me/50372682797?text=Hola%2C%20quiero%20m%C3%A1s%20detalles%20de%20InciSoft" target="_blank" rel="noopener">WhatsApp</a>, o puedes elegir otra pregunta de abajo.
 
 C: ok, okay, listo, bien, dale
 R: 👍 ¿Te ayudo con algo más? Si quieres, te preparamos tu <a href="#cotizar">cotización</a>.
 
 C: si, claro, me interesa, quiero, va, sale
-R: ¡Excelente! 🎉 Llena el <a href="#cotizar">formulario de cotización</a> y te contactamos hoy mismo. Si prefieres, <a href="https://wa.me/50370000000?text=Hola%2C%20me%20interesa%20InciSoft" target="_blank" rel="noopener">escríbenos por WhatsApp</a>.
+R: ¡Excelente! 🎉 Llena el <a href="#cotizar">formulario de cotización</a> y te contactamos hoy mismo. Si prefieres, <a href="https://wa.me/50372682797?text=Hola%2C%20me%20interesa%20InciSoft" target="_blank" rel="noopener">escríbenos por WhatsApp</a>.
 
 C: no, no gracias, nada, ninguna, despues
 R: ¡Sin problema! Aquí estaré cuando lo necesites. Si te sirve, te dejo los <a href="#planes">planes</a> para que los revises con calma.
@@ -361,9 +360,9 @@ Cuéntanos qué te falta en tu sistema actual en la <a href="#cotizar">cotizaci�
 
 C: prueba, probar, gratis, demostracion, ver como funciona
 R: Puedes probar el odontograma en la demo del <a href="#inicio">inicio</a> (pulsa una pieza). 😉
-Para ver el sistema completo, <a href="https://wa.me/50370000000?text=Hola%2C%20quiero%20ver%20c%C3%B3mo%20funciona%20InciSoft" target="_blank" rel="noopener">escríbenos por WhatsApp</a> y te contamos.
+Para ver el sistema completo, <a href="https://wa.me/50372682797?text=Hola%2C%20quiero%20ver%20c%C3%B3mo%20funciona%20InciSoft" target="_blank" rel="noopener">escríbenos por WhatsApp</a> y te contamos.
 # PENDIENTE: si ofrecen prueba gratis o demo en vivo, dilo aquí.
 
 C: horario, hora, horas, atienden, abren, cierran
-R: Escríbenos por <a href="https://wa.me/50370000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20InciSoft" target="_blank" rel="noopener">WhatsApp</a> o deja tus datos en el <a href="#cotizar">formulario</a> y te contactamos el mismo día.
+R: Escríbenos por <a href="https://wa.me/50372682797?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20InciSoft" target="_blank" rel="noopener">WhatsApp</a> o deja tus datos en el <a href="#cotizar">formulario</a> y te contactamos el mismo día.
 # PENDIENTE: agrega aquí el horario de atención.

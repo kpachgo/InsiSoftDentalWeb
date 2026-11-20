@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /og.html
+Disallow: /contextos/
+Disallow: /contenido-index.txt
+
+Sitemap: https://incisoftdental.com/sitemap.xml

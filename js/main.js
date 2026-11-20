@@ -1,7 +1,7 @@
 // Correo y WhatsApp de contacto de InciSoft.
 // Alias de FormSubmit para contacto@incisoftdental.com (oculta el correo a los bots)
 const FORM_ID = '3c0ac99a984a724d2e4ad822bdffaed3';
-const WA = '7000-0000';
+const WA = '7268-2797';
 
 // Nav sólido al bajar
 const nav = document.querySelector('.nav');
