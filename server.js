@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8080;
 const KEY = process.env.DEEPSEEK_API_KEY;
 
 // ponytail: sin límite diario por IP mientras se prueba; volver a poner uno (p. ej. 100) al lanzar.
-const POR_DIA = Infinity, POR_MINUTO = 5, MAX_CHARS = 1000, MAX_HISTORIAL = 10;
+const POR_DIA = Infinity, POR_MINUTO = 20, MAX_CHARS = 1000, MAX_HISTORIAL = 10;
 const GLOBAL_DIA = 1500; // tope total diario: protege el gasto aunque alguien falsee IPs
 const LIMITE = 'Llegaste al límite de mensajes por ahora. Escríbenos por WhatsApp al 7268-2797 y con gusto te atendemos.';
 

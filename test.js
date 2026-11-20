@@ -3,8 +3,8 @@ const assert = require('node:assert');
 const { permitir, limpiar, validarLead, PROMPT } = require('./server.js');
 
 const t = Date.UTC(2026, 0, 1, 12);
-for (let i = 0; i < 5; i++) assert.ok(permitir('a', t));
-assert.ok(!permitir('a', t), '6º mensaje en el mismo minuto se bloquea');
+for (let i = 0; i < 20; i++) assert.ok(permitir('a', t));
+assert.ok(!permitir('a', t), '21º mensaje en el mismo minuto se bloquea');
 assert.ok(permitir('b', t), 'otra IP no se ve afectada');
 
 assert.ok(permitir('a', t + 60_000), 'al minuto siguiente se libera');
