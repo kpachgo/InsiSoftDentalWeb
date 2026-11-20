@@ -315,21 +315,12 @@ details p { padding: 0 24px 20px; color: var(--gris); }
 @keyframes msg-in { from { opacity: 0; transform: translateY(6px); } }
 .bot-msg.el { align-self: flex-start; background: #fff; border-bottom-left-radius: 4px; box-shadow: 0 2px 8px rgba(11,30,64,.07); }
 .bot-msg.yo { align-self: flex-end; background: var(--grad); color: #fff; border-bottom-right-radius: 4px; }
-.bot-msg a { color: var(--azul); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
-.bot-opts { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
-.bot-opts button { text-align: left; padding: 7px 12px; border-radius: 12px; border: 1.5px solid var(--borde); background: var(--suave); color: var(--oscuro); font: 600 .84rem Quicksand, sans-serif; transition: border-color .2s, background .2s, color .2s; }
-.bot-opts button:hover, .bot-opts button:focus-visible { border-color: var(--azul); background: var(--azul); color: #fff; }
 .bot-typing { display: flex; gap: 4px; padding: 14px 16px; }
 .bot-typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--gris); opacity: .4; animation: dot 1s infinite; }
 .bot-typing i:nth-child(2) { animation-delay: .15s; }
 .bot-typing i:nth-child(3) { animation-delay: .3s; }
 @keyframes dot { 30% { opacity: 1; transform: translateY(-3px); } }
-.bot-label { padding: 10px 14px 0; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gris); border-top: 1px solid var(--borde); }
-.bot-chips { display: flex; flex-wrap: wrap; gap: 6px; max-height: 84px; overflow-y: auto; padding: 8px 14px 4px; scrollbar-width: thin; }
-.bot-chips:not(:has(button)) { font-size: .82rem; color: var(--gris); }
-.bot-chips button { padding: 6px 12px; border-radius: 999px; border: 1.5px solid var(--borde); background: #fff; color: var(--oscuro); font: 600 .8rem Quicksand, sans-serif; transition: border-color .2s, background .2s, color .2s; }
-.bot-chips button:hover, .bot-chips button:focus-visible { border-color: var(--azul); background: var(--azul); color: #fff; }
-.bot-form { display: flex; gap: 8px; padding: 10px 14px 8px; }
+.bot-form { display: flex; gap: 8px; padding: 10px 14px 8px; border-top: 1px solid var(--borde); }
 .bot-form input { flex: 1; min-width: 0; padding: 11px 16px; border: 1.5px solid var(--borde); border-radius: 999px; background: var(--suave); font: 500 .92rem Quicksand, sans-serif; transition: border-color .2s, background .2s; }
 .bot-form input:focus { outline: none; border-color: var(--azul); background: #fff; }
 .bot-form button { flex: none; width: 44px; height: 44px; border: 0; border-radius: 50%; display: grid; place-items: center; background: var(--grad); color: #fff; transition: transform .2s; }
