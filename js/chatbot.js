@@ -1,4 +1,4 @@
-// Asistente de preguntas frecuentes: respuestas predefinidas, sin IA.
+// Asistente: las sugeridas responden desde el archivo; lo que se escribe va a la IA (/api/chat).
 // Las preguntas viven en chatbot-preguntas.txt (formato explicado dentro del archivo).
 const WA_URL = 'https://wa.me/50372682797?text=';
 const WA_LINK = '<a href="' + WA_URL + 'Hola%2C%20tengo%20una%20pregunta%20sobre%20InciSoft" target="_blank" rel="noopener">pregúntanos por WhatsApp</a>';
@@ -102,6 +102,7 @@ if (bot) {
   const form = bot.querySelector('.bot-form');
   let db = { faq: [], syn: [] };
   let last = null; // última pregunta respondida, para el contexto
+  const historial = []; // conversación con la IA (el servidor recorta a 10)
 
   const optionButtons = (items) => items.map((item) => {
     const b = document.createElement('button');
@@ -113,7 +114,7 @@ if (bot) {
   const say = (html, who, options) => {
     const p = document.createElement('div');
     p.className = 'bot-msg ' + who;
-    if (who === 'yo') p.textContent = html; // texto del visitante: nunca como HTML
+    if (who === 'yo' || who === 'el ia') p.textContent = html; // visitante e IA: nunca como HTML
     else p.innerHTML = html; // respuestas del archivo propio de la clínica
     if (options?.length) {
       const box = document.createElement('div');
@@ -171,12 +172,37 @@ if (bot) {
   // Los enlaces internos (#planes, #cotizar) cierran el chat para que se vea la sección.
   log.addEventListener('click', (e) => { if (e.target.closest('a[href^="#"]')) setOpen(false); });
 
-  form.onsubmit = (e) => {
+  form.onsubmit = async (e) => {
     e.preventDefault();
-    const text = form.elements.q.value.trim().slice(0, 200);
+    const text = form.elements.q.value.trim().slice(0, 1000);
     if (!text) return;
     form.reset();
     showChips('');
-    ask(text, decide(db, text, last));
+    say(text, 'yo');
+    log.querySelector('.bot-typing')?.remove();
+    const typing = document.createElement('p');
+    typing.className = 'bot-msg el bot-typing';
+    typing.setAttribute('aria-label', 'Escribiendo');
+    typing.innerHTML = '<i></i><i></i><i></i>';
+    log.append(typing);
+    log.scrollTop = log.scrollHeight;
+    historial.push({ role: 'user', content: text });
+    try {
+      const r = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: historial.slice(-10) }),
+      });
+      const data = await r.json();
+      typing.remove();
+      if (r.ok) historial.push({ role: 'assistant', content: data.reply });
+      else historial.pop();
+      say(data.reply || data.error, 'el ia');
+    } catch {
+      // Sin servidor (p. ej. Live Server en local): respuestas del archivo.
+      typing.remove();
+      historial.pop();
+      reply(decide(db, text, last));
+    }
   };
 }

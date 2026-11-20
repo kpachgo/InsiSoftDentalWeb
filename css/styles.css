@@ -393,3 +393,5 @@ details p { padding: 0 24px 20px; color: var(--gris); }
   .reveal, .bubble { opacity: 1; transform: none; }
   .bar span { width: var(--w); }
 }
+
+.bot-msg.ia { white-space: pre-wrap; }
