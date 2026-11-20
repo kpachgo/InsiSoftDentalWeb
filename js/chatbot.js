@@ -46,17 +46,21 @@ if (bot) {
   });
 
   const registrarLead = async (lead) => {
-    const conversacion = [...log.querySelectorAll('.bot-msg:not(.bot-typing)')]
-      .map((msg) => `${msg.classList.contains('yo') ? 'Cliente' : 'Asistente'}: ${msg.textContent}`)
-      .join('\n');
+    // Solo los datos, en orden y con nombres legibles: el correo se lee de un vistazo, sin la conversación.
     const res = await fetch(`https://formsubmit.co/ajax/${FORM_ID}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
-        ...lead,
-        origen: 'Chat IA de la web',
-        conversacion,
+        Nombre: lead.nombre,
+        'Teléfono / WhatsApp': lead.telefono,
+        Clínica: lead.clinica,
+        Solicita: lead.interes,
+        Odontólogos: lead.odontologos || '—',
+        Correo: lead.correo || '—',
+        Necesidad: lead.comentario || '—',
+        Origen: 'Chat IA de la web',
         _subject: `Chat IA · ${lead.interes} · ${lead.clinica}`,
+        _template: 'table',
       }),
     });
     const data = await res.json();
