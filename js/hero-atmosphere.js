@@ -546,12 +546,26 @@
     context.font = '12px "Courier New", monospace';
     context.textAlign = 'center';
     context.textBaseline = 'middle';
-    const radius = Math.min(width * .28, height * .35, 300);
     const textBounds = hero.querySelector('.hero-txt').getBoundingClientRect();
+    const heroBounds = hero.getBoundingClientRect();
     const backgroundBounds = atmosphere.getBoundingClientRect();
+    const visibleLeft = heroBounds.left - backgroundBounds.left;
+    const visibleRight = heroBounds.right - backgroundBounds.left;
+    // During a morph, the sideways particle arc can add up to 54% to the
+    // figure's radius. Size mobile figures for that widest state so they never
+    // get clipped by the viewport.
+    const mobileRadius = (visibleRight - visibleLeft - 24) / (2 * 1.54);
+    const radius = Math.min(
+      width * .28,
+      height * .35,
+      300,
+      compactScreen.matches ? mobileRadius : Infinity
+    );
     const centerX = fixedCircle
       ? compactScreen.matches
-        ? width * .78
+        // Keep the composition right-aligned while leaving at least 90% of
+        // the widest transition visible inside the viewport.
+        ? visibleRight - radius * 1.54 * .8
         : textBounds.left - backgroundBounds.left + textBounds.width * .1
       : width * (.22 + Math.sin(time * .085) * .1);
     const centerY = fixedCircle
