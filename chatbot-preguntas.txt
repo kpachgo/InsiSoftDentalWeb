@@ -1,0 +1,369 @@
+# PREGUNTAS Y RESPUESTAS DEL ASISTENTE DE LA PÁGINA
+# ==================================================
+#
+# Cómo agregar una pregunta nueva:
+#   P:  la pregunta, tal como aparece en el botón sugerido
+#   C:  palabras clave separadas por comas (si el visitante escribe alguna, se elige esta respuesta)
+#   R:  la respuesta. Puede ocupar varias líneas.
+# Deja una línea en blanco entre cada pregunta.
+# En la respuesta puedes usar <b>negrita</b> y enlaces como <a href="#planes">Ver planes</a>.
+# Las líneas que empiezan con # son notas y el asistente las ignora.
+# Las 3 primeras preguntas son las que se sugieren al abrir el chat.
+#
+# Trucos:
+#   - Sin P: la respuesta queda OCULTA: no sale como sugerencia, pero responde si
+#     escriben sus palabras clave. Sirve para saludos, "gracias", objeciones, etc.
+#   - S: grupo de sinónimos que valen igual en TODAS las preguntas.
+#     Ejemplo:  S: precio = costo, valor, tarifa
+#   - {tema} en una respuesta se cambia por la última pregunta que se respondió.
+#   - Palabras clave de 3 letras o menos (ia, pro) solo cuentan si se escriben exactas;
+#     las largas aceptan errores de dedo (presio → precio).
+#   - Si una pregunta cae en el tema equivocado, revisa que sus palabras clave no
+#     se repitan en otra pregunta.
+#
+# Tono: vendedor amable. Responde lo que preguntan, suma un beneficio extra y
+# cierra invitando a dar el siguiente paso (plan, cotización o WhatsApp).
+#
+# Nota: el sitio ya NO promete migrar pacientes ni da detalles técnicos de
+# seguridad. No agregues promesas que no estén confirmadas.
+
+# ---- Sinónimos ----
+S: precio = costo, valor, tarifa, mensualidad, inversion
+S: doctor = odontologo, odontologos, dentista, dentistas, doctora, doctores
+S: clinica = consultorio, consultorios, centro
+S: sede = sedes, sucursal, sucursales
+S: paciente = pacientes, cliente, clientes
+S: whatsapp = wasap, whats, wsp, wpp
+S: celular = telefono movil, movil, smartphone, iphone, android
+S: sistema = software, programa, plataforma, aplicacion, app
+S: radiografia = radiografias, rayos, rx, placa, placas
+S: odontograma = dientes, piezas, pieza
+
+# ---- PENDIENTES: completa estos datos y quita el # de la respuesta ----
+# ¿En qué horario atienden?  (no está en la página)
+# ¿Tienen prueba gratis o demostración en vivo?  (no está confirmado)
+# Dirección física de la oficina  (ver pregunta "¿Dónde están ubicados?")
+
+
+# ================= LAS 3 QUE SE SUGIEREN AL ABRIR =================
+
+P: ¿Cuánto cuesta?
+C: cuesta, precio, cuanto, vale, mensual
+R: Tenemos 3 planes (precios en USD):
+<b>Esencial $29/mes</b> · 1 odontólogo
+<b>Pro $59/mes</b> · hasta 3 odontólogos (el más elegido)
+<b>Premium $99/mes</b> · hasta 6 odontólogos y 2 sedes, con Agente IA en WhatsApp
+💡 Si pagas el año completo te regalamos <b>2 meses</b>.
+¿Cuántos odontólogos trabajan en tu clínica? Así te digo cuál te conviene. <a href="#planes">Ver planes</a>
+
+P: ¿Qué plan me conviene?
+C: plan, planes, conviene, recomienda, recomiendas, diferencia, elegir, cuantos, doctor, sede
+R: Depende del tamaño de tu clínica:
+👤 <b>1 odontólogo, 1 sede</b> → Esencial ($29/mes)
+👥 <b>2 o 3 odontólogos</b> → Pro ($59/mes), con seguimiento de pacientes e inventario
+🏥 <b>Varias sedes o hasta 6 odontólogos</b> → Premium ($99/mes), con recordatorios y Agente IA en WhatsApp
+Si dudas entre dos, cuéntanos en la <a href="#cotizar">cotización</a> y te recomendamos el justo, sin pagar de más.
+
+P: ¿Por qué elegir InciSoft?
+C: elegir, porque, por que, ventaja, ventajas, diferente, diferencia, mejor, mejores, convence, competencia, otros
+R: Porque <b>lo hicimos desde la clínica, no desde una oficina</b>. Lo crearon personas que trabajan todos los días dentro de clínicas dentales.
+✅ Sigue el flujo real: recepción, sala de espera, consulta, cobro y seguimiento.
+✅ Un solo expediente por paciente: historia, odontograma, radiografías, citas y saldos.
+✅ Cada rol ve lo suyo, desde marketing hasta administración.
+✅ Te capacitamos hasta que tu equipo trabaje solo, y las mejoras salen de lo que piden las clínicas.
+¿Quieres ver cuánto te costaría? <a href="#cotizar">Pide tu cotización</a>.
+
+
+# ================= SOBRE INCISOFT =================
+
+P: ¿Qué es InciSoft?
+C: incisoft, que hace, se trata, de que trata
+R: InciSoft es un <b>expediente clínico digital para clínicas dentales</b>: historia clínica, odontograma, radiografías, firmas, agenda y cobros de cada paciente en un solo lugar.
+Recepción agenda y recibe, el doctor registra y autoriza, caja cobra: cada quien hace su parte y todo queda en el mismo expediente.
+¿Te cuento qué plan va con tu clínica?
+
+P: ¿Quién creó InciSoft?
+C: quien, quienes, creo, creador, creadores, empresa, hicieron, desarrollo, historia
+R: Lo hicimos <b>personas que trabajan dentro de clínicas</b>, no programadores que nunca atendieron un paciente.
+Nació para resolver el día a día real: el paciente que llega sin cita, el abono que nadie anotó, la radiografía que no aparece y la firma que faltó.
+Por eso cada pantalla responde a algo que pasa en tu clínica. 😉
+
+P: ¿Dónde están ubicados?
+C: ubicacion, ubicados, donde, direccion, oficina, pais, ciudad, visitar, local
+R: InciSoft funciona <b>100% en línea</b>: lo usas desde tu clínica, esté donde esté, sin instalar nada.
+Te atendemos por <a href="https://wa.me/50370000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20InciSoft" target="_blank" rel="noopener">WhatsApp 7000-0000</a>, al teléfono 2400-0000 o al correo contacto@incisoftdental.com.
+# PENDIENTE: si quieres mostrar ciudad o dirección, agrégala aquí arriba.
+
+P: ¿Sirve para mi consultorio?
+C: sirve, consultorio, pequeno, pequena, grande, tamano, solo, independiente, clinica
+R: Sí, desde el más pequeño hasta el más grande:
+<b>Esencial</b> para el consultorio de un odontólogo.
+<b>Pro</b> para clínicas con varios doctores.
+<b>Premium</b> para centros odontológicos con varias sedes y equipos completos.
+Y si tu clínica crece, el sistema crece contigo. ¿Cuántos odontólogos son?
+
+P: ¿Por qué no seguir con papel o Excel?
+C: papel, excel, cuaderno, libreta, fichas, fisico, manual, actual
+R: Con papel y Excel el expediente queda repartido: la ficha en un archivo, las radiografías en el celular, los abonos en un cuaderno. 😅
+Con InciSoft todo vive en <b>un solo expediente por paciente</b>, con firma y sello del doctor, listo para imprimir en PDF cuando lo necesites.
+Menos tiempo buscando, menos abonos perdidos y una clínica que se ve más profesional.
+
+
+# ================= PLANES =================
+
+P: ¿Qué incluye el plan Esencial?
+C: esencial, basico, economico, inicial
+R: <b>Esencial · $29/mes</b> (o $290 al año, ahorras $58)
+1 odontólogo · 1 sede
+✅ Expediente clínico e historia médica
+✅ Odontograma digital con historial
+✅ Radiografías y fotos por paciente
+✅ Firma del paciente y del doctor
+✅ Agenda y sala de espera
+✅ Presupuestos impresos
+✅ Control de caja y cobros
+Ideal para dejar el papel. Si tienes más de un doctor, el <b>Pro</b> te conviene más.
+
+P: ¿Qué incluye el plan Pro?
+C: pro, recomendado, intermedio, medio
+R: <b>Pro · $59/mes</b> (o $590 al año, ahorras $118) ⭐ el más elegido
+Hasta 3 odontólogos (+$15/mes por cada adicional)
+Todo lo de Esencial, más:
+✅ Autorización de tratamientos por odontólogo
+✅ Reportes de gestión
+✅ Control de gastos
+✅ Seguimiento de pacientes
+✅ Inventario y pedidos
+Perfecto para ordenar recepción, consultorio y caja. <a href="#cotizar">Cotizar Pro</a>
+
+P: ¿Qué incluye el plan Premium?
+C: premium, completo, avanzado, superior, top
+R: <b>Premium · $99/mes</b> (o $990 al año, ahorras $198)
+Hasta 6 odontólogos · 2 sedes (+$39/mes por sede adicional)
+Todo lo de Pro, más:
+✅ Recordatorios automáticos por WhatsApp*
+✅ Agente IA en WhatsApp que agenda fuera de horario*
+✅ Capacitación personalizada
+✅ Soporte prioritario
+*Los mensajes de WhatsApp se pagan aparte, directo a Meta.
+Para clínicas que quieren crecer y fidelizar. <a href="#cotizar">Cotizar Premium</a>
+
+P: ¿Hay descuento por pago anual?
+C: anual, descuento, descuentos, promocion, oferta, ahorro, ahorrar, rebaja
+R: ¡Sí! Pagando el año completo te regalamos <b>2 meses</b>:
+Esencial $290/año (ahorras $58)
+Pro $590/año (ahorras $118)
+Premium $990/año (ahorras $198)
+¿Te preparo la cotización anual? <a href="#cotizar">Pedirla aquí</a>
+
+P: ¿Cómo se paga?
+C: pago, pagar, pagos, forma, formas, tarjeta, transferencia, deposito, metodo, factura
+R: Puedes pagar con <b>tarjeta o transferencia</b>, mes a mes o el año completo (con 2 meses gratis).
+Aplican términos y condiciones; te los detallamos junto con tu <a href="#cotizar">cotización</a>.
+
+P: ¿Puedo agregar más doctores o sedes?
+C: agregar, adicional, adicionales, crecer, ampliar, extra, mas doctores, otra sede
+R: Claro, el sistema crece con tu clínica:
+<b>Pro</b>: +$15/mes por cada odontólogo adicional.
+<b>Premium</b>: +$39/mes por cada sede adicional.
+Cuéntanos cuántos son en la <a href="#cotizar">cotización</a> y te armamos el precio exacto.
+
+P: ¿Funciona con varias sedes?
+C: sede, multisede, multisucursal, varias, sucursal
+R: Sí, con el plan <b>Premium</b>: incluye 2 sedes y puedes sumar más por +$39/mes cada una.
+Así ves toda tu operación desde un solo sistema. ¿Cuántas sedes tienes?
+
+
+# ================= FUNCIONES =================
+
+P: ¿Qué incluye el expediente?
+C: expediente, historia, historial, alergias, diagnostico, evolucion, ficha, funciones, notas
+R: Todo lo del paciente en un solo lugar:
+✅ Datos personales e historia médica, con <b>alergias a la vista</b>
+✅ Odontograma con historial
+✅ Radiografías y fotos por álbum
+✅ Diagnóstico, evolución y notas para la próxima cita
+✅ Firma del paciente y autorización del doctor con firma y sello
+Y lo imprimes completo en PDF cuando lo necesites. <a href="#funciones">Ver funciones</a>
+
+P: ¿Cómo es el odontograma?
+C: odontograma, superficie, nomenclatura, caries, tratado, pendiente
+R: Es un <b>odontograma digital por pieza y superficie</b>, con historial de cada versión: ves cómo estaba la boca en cada cita.
+Puedes usar nomenclatura casual o profesional, a gusto de tu clínica.
+Desde el odontograma sale el diagnóstico resumido para el presupuesto. 😉 Pruébalo en la demo del <a href="#inicio">inicio</a>: pulsa una pieza.
+
+P: ¿Puedo guardar radiografías y fotos?
+C: radiografia, foto, fotos, fotografias, imagenes, examenes, escaneado, album
+R: Sí, ordenadas por álbum en el expediente de cada paciente: <b>radiografías, fotografías, exámenes y el expediente físico escaneado</b>.
+Se acabó la radiografía que no aparece. Y van incluidas al imprimir el expediente completo.
+
+P: ¿El paciente puede firmar?
+C: firma, firmar, sello, autorizacion, autoriza, consentimiento
+R: Sí. El <b>paciente firma en pantalla</b> y el <b>doctor autoriza cada tratamiento con su firma y sello</b>.
+Todo queda guardado en el expediente y sale en los documentos impresos.
+En Pro y Premium, cada odontólogo autoriza sus propios tratamientos.
+
+P: ¿Cómo funciona la agenda?
+C: agenda, cita, citas, agendar, calendario, reprogramar, confirmar, espera, cola
+R: Agenda <b>por día y por mes</b>, con la carga de cada día a la vista.
+Marcas a quién ya llamaste o escribiste, reprogramas una cita arrastrándola y pasas al paciente a la <b>sala de espera</b> con su doctor asignado.
+En Premium, además, los recordatorios por WhatsApp salen solos. 📲
+
+P: ¿Cómo se manejan los cobros?
+C: caja, cobro, cobros, cobrar, abono, abonos, saldo, saldos, efectivo, aseguradora, seguro medico, medico, cierre, billetes
+R: Registras <b>abonos y saldos por paciente</b> con efectivo, tarjeta, transferencia o seguro.
+Al final del día haces el <b>cierre de caja con conteo de billetes</b>. Adiós al abono que nadie anotó.
+Incluido desde el plan Esencial.
+
+P: ¿Cómo hago presupuestos?
+C: presupuesto, presupuestos, cotizar tratamiento, plan de tratamiento, tratamientos
+R: El presupuesto sale <b>directo del odontograma</b>, con el logo y los datos de tu clínica:
+media página u hoja formal, diagnóstico resumido, tus precios, formas de pago, promociones o indicaciones, y firma y sello del odontólogo.
+Se ve profesional y el paciente se lo lleva claro. Incluido en todos los planes.
+
+P: ¿Qué es el seguimiento de pacientes?
+C: seguimiento, volver, regresan, recuperar, inactivos, fidelizar, llamar
+R: Te dice <b>quién no ha vuelto en 2 o 3 meses</b>, a quién ya llamaste y quién tiene próxima cita.
+Así recuperas pacientes que se iban a perder. 💪 Viene en los planes <b>Pro y Premium</b>.
+
+P: ¿Lleva inventario?
+C: inventario, materiales, insumos, pedidos, proveedor, stock
+R: Sí, en <b>Pro y Premium</b>: controlas tus materiales y armas los <b>pedidos en PDF</b> listos para enviar al proveedor.
+Tu asistente puede llevar los pedidos sin tocar la caja ni los expedientes.
+
+P: ¿Tiene reportes?
+C: reporte, reportes, ingresos, gastos, estadisticas, ganancias, gestion, numeros
+R: Sí. Tienes <b>reporte mensual de ingresos</b>, y en <b>Pro y Premium</b> además <b>reportes de gestión y control de gastos</b>.
+Así sabes cuánto entra, cuánto sale y cómo va tu clínica mes a mes.
+
+P: ¿Qué ve cada persona del equipo?
+C: rol, roles, usuario, usuarios, permiso, permisos, equipo, recepcion, asistente, administracion, marketing, acceso
+R: Cada quien entra con su usuario y ve solo lo suyo:
+<b>Marketing</b>: agenda y contacta pacientes, sin ver expedientes ni caja.
+<b>Recepción</b>: confirma citas, pasa a sala de espera y cobra.
+<b>Asistente</b>: trabaja en el expediente y lleva los pedidos.
+<b>Doctor</b>: registra el tratamiento y lo autoriza con firma y sello.
+<b>Administración</b>: ve toda la clínica y hace los borrados delicados.
+Lo que uno registra le llega al siguiente, sin volver a escribir datos.
+
+P: ¿Qué puedo imprimir?
+C: imprimir, impresion, pdf, constancia, documento, documentos, formato, formatos
+R: Todo listo para imprimir o guardar en PDF:
+📄 Expediente completo, con odontograma, firmas y radiografías
+📄 Presupuesto con tu logo
+📄 Constancia de asistencia, sencilla o formal
+📄 Tus propios formatos (indicaciones, fichas)
+📄 Pedidos de inventario
+
+P: ¿Cómo funciona lo de WhatsApp?
+C: whatsapp, recordatorio, recordatorios, agente, ia, inteligencia, meta, mensaje, mensajes, automatico
+R: En el plan <b>Premium</b> tienes:
+📲 <b>Recordatorios automáticos</b> de cita por WhatsApp, para que falten menos pacientes.
+🤖 <b>Agente IA en WhatsApp</b> que agenda citas fuera de horario, mientras tu clínica descansa.
+El consumo de mensajes no va en el plan: la clínica lo paga directo a Meta (API oficial de WhatsApp Business), según su uso.
+
+P: ¿Mis datos están seguros?
+C: seguro, seguridad, datos, privacidad, confidencial, sensibles, ocultar, contrasena
+R: Cada persona entra con <b>su propio usuario y contraseña</b> y solo ve lo que le toca.
+Los borrados delicados solo los hace administración, y hay un protocolo para <b>ocultar expedientes sensibles</b> cuando lo necesites.
+
+
+# ================= USO Y ARRANQUE =================
+
+P: ¿Hay que instalar algo?
+C: instalar, instalacion, descargar, navegador, computadora, laptop, equipo viejo, windows, mac
+R: No. Funciona desde el <b>navegador</b> en computadora, tablet o celular, incluso en equipos con varios años de uso.
+Solo necesitas internet. Entras y trabajas, así de simple.
+
+P: ¿Funciona en celular o tablet?
+C: celular, tablet, ipad, movil
+R: ¡Sí! Entras desde el navegador de tu celular o tablet, sin descargar nada.
+Muy útil para que el paciente firme en la tablet o para revisar tu agenda desde donde estés.
+
+P: ¿Necesito internet?
+C: internet, conexion, wifi, offline, sin internet, linea
+R: Sí, InciSoft funciona en línea, así que necesitas conexión a internet.
+A cambio no instalas nada y entras desde cualquier computadora, tablet o celular.
+
+P: ¿Me capacitan?
+C: capacita, capacitacion, capacitan, aprender, enseñan, ensenan, dificil, facil, entrenamiento, curso
+R: ¡Claro! <b>Capacitamos a tu equipo hasta que trabajen solos</b> y saquen provecho al sistema.
+En Premium la capacitación es personalizada. Y como lo diseñamos con el flujo real de la clínica, se aprende rápido.
+
+P: ¿Qué soporte tienen?
+C: soporte, ayuda, problema, falla, asistencia, atencion, contacto
+R: Te atiende gente que <b>habla el idioma de la clínica</b>: sabe qué es una evolución o un abono.
+Escríbenos por <a href="https://wa.me/50370000000?text=Hola%2C%20necesito%20ayuda%20con%20InciSoft" target="_blank" rel="noopener">WhatsApp 7000-0000</a> o a contacto@incisoftdental.com. En Premium tienes soporte prioritario.
+
+P: ¿Pueden pasar mis pacientes al sistema?
+C: migrar, migracion, pasar, importar, cargar, base, existentes, mis pacientes
+R: Cada clínica trae su información de forma distinta (papel, Excel, otro sistema), así que lo revisamos contigo en tu <a href="#cotizar">cotización</a>.
+Cuéntanos en comentarios cómo tienes hoy tus pacientes y te decimos cómo arrancar.
+
+P: ¿Cómo empiezo?
+C: empezar, empiezo, iniciar, arrancar, comenzar, pasos, proceso, contratar, adquirir
+R: Es muy sencillo:
+1️⃣ Llenas el <a href="#cotizar">formulario</a> y te contactamos <b>el mismo día</b>.
+2️⃣ Te enviamos tu cotización a la medida.
+3️⃣ Capacitamos a tu equipo para arrancar.
+¿Lo llenamos de una vez? 😊
+
+P: Quiero una cotización
+C: cotizacion, cotizar, comprar, demo, asesor, vendedor, informacion, interesa
+R: ¡Con gusto! Llena el <a href="#cotizar">formulario de cotización</a> y te contactamos el mismo día, o <a href="https://wa.me/50370000000?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20de%20InciSoft" target="_blank" rel="noopener">escríbenos por WhatsApp</a>.
+Tip: dinos cuántos odontólogos y sedes tienes para darte el precio exacto.
+
+P: ¿Cómo los contacto?
+C: contactar, telefono, numero, llamar, correo, email, escribir, comunicar
+R: Por donde prefieras:
+📲 <a href="https://wa.me/50370000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20InciSoft" target="_blank" rel="noopener">WhatsApp 7000-0000</a>
+☎️ Teléfono 2400-0000
+✉️ <a href="mailto:contacto@incisoftdental.com">contacto@incisoftdental.com</a>
+O deja tus datos en el <a href="#cotizar">formulario</a> y te llamamos el mismo día.
+
+
+# ================= CHARLA Y OBJECIONES (ocultas: sin P:) =================
+
+C: hola, buenas, buenos, saludos, hey, holi, que tal
+R: ¡Hola! 😊 Bienvenido a InciSoft. Puedo contarte de precios, planes o cómo funciona el expediente digital. ¿Qué te gustaría saber?
+
+C: gracias, amable, genial, perfecto, excelente, buenisimo, chevere
+R: ¡Con gusto! 🙌 Cuando quieras tu cotización, llena el <a href="#cotizar">formulario</a> y te contactamos el mismo día.
+
+C: adios, chao, bye, nos vemos, hasta luego
+R: ¡Hasta pronto! Aquí estaré si te surge otra duda. 👋
+
+C: robot, humano, persona, real, bot, eres
+R: Soy un asistente automático con respuestas preparadas por el equipo de InciSoft. Si prefieres hablar con una persona, <a href="https://wa.me/50370000000?text=Hola%2C%20quiero%20hablar%20con%20alguien%20de%20InciSoft" target="_blank" rel="noopener">escríbenos por WhatsApp</a>.
+
+C: entendi, entiendo, explicar, explica, detalle, detalles, mas info
+R: Te puedo dar más detalle sobre {tema} por <a href="https://wa.me/50370000000?text=Hola%2C%20quiero%20m%C3%A1s%20detalles%20de%20InciSoft" target="_blank" rel="noopener">WhatsApp</a>, o puedes elegir otra pregunta de abajo.
+
+C: ok, okay, listo, bien, dale
+R: 👍 ¿Te ayudo con algo más? Si quieres, te preparamos tu <a href="#cotizar">cotización</a>.
+
+C: si, claro, me interesa, quiero, va, sale
+R: ¡Excelente! 🎉 Llena el <a href="#cotizar">formulario de cotización</a> y te contactamos hoy mismo. Si prefieres, <a href="https://wa.me/50370000000?text=Hola%2C%20me%20interesa%20InciSoft" target="_blank" rel="noopener">escríbenos por WhatsApp</a>.
+
+C: no, no gracias, nada, ninguna, despues
+R: ¡Sin problema! Aquí estaré cuando lo necesites. Si te sirve, te dejo los <a href="#planes">planes</a> para que los revises con calma.
+
+C: caro, costoso, carisimo, no me alcanza, presupuesto bajo
+R: Te entiendo. Piénsalo así: <b>Esencial cuesta $29 al mes, menos de $1 al día</b>, y con el pago anual te regalamos 2 meses.
+Un solo abono que no se pierde o un paciente que vuelve gracias al seguimiento ya paga el mes. ¿Te armo una cotización a la medida?
+
+C: pensar, pensarlo, decidir, consultar, socio, despues lo veo
+R: ¡Claro, tómate tu tiempo! Te recomiendo pedir la <a href="#cotizar">cotización</a>: es sin compromiso y te llega con el precio exacto para tu clínica, así lo decides con números en mano.
+
+C: ya uso, ya tengo, otro sistema, otro programa, cambiar
+R: ¡Qué bueno que ya digitalizaste tu clínica! La diferencia de InciSoft es que <b>lo hicimos desde la clínica</b>: sigue el flujo real de recepción, consulta, caja y seguimiento, con un solo expediente por paciente.
+Cuéntanos qué te falta en tu sistema actual en la <a href="#cotizar">cotización</a> y te decimos cómo te ayudamos.
+
+C: prueba, probar, gratis, demostracion, ver como funciona
+R: Puedes probar el odontograma en la demo del <a href="#inicio">inicio</a> (pulsa una pieza). 😉
+Para ver el sistema completo, <a href="https://wa.me/50370000000?text=Hola%2C%20quiero%20ver%20c%C3%B3mo%20funciona%20InciSoft" target="_blank" rel="noopener">escríbenos por WhatsApp</a> y te contamos.
+# PENDIENTE: si ofrecen prueba gratis o demo en vivo, dilo aquí.
+
+C: horario, hora, horas, atienden, abren, cierran
+R: Escríbenos por <a href="https://wa.me/50370000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20InciSoft" target="_blank" rel="noopener">WhatsApp</a> o deja tus datos en el <a href="#cotizar">formulario</a> y te contactamos el mismo día.
+# PENDIENTE: agrega aquí el horario de atención.

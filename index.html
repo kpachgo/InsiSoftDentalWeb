@@ -7,7 +7,7 @@
   <meta name="description" content="Expediente clínico digital para clínicas dentales: historia clínica, odontograma, firmas, agenda y cobros, de la recepción al consultorio. Hecho desde la clínica.">
   <meta name="theme-color" content="#0B1E40">
   <link rel="icon" href="logo-color.png">
-  <link rel="preload" href="fuentes/Quicksand-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="fuentes/Quicksand-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
   <style>
     .hero-atmosphere { position: absolute; inset: -70px; overflow: hidden; pointer-events: none; }
@@ -25,6 +25,9 @@
     @media (prefers-reduced-motion: reduce) { .hero-atmosphere .glow { animation: none; } }
     .atmosphere-parallax { position: absolute; inset: 0; transition: transform 1.8s cubic-bezier(.2,.65,.3,1); }
     .atmosphere-ascii { position: absolute; inset: 0; width: 100%; height: 100%; }
+    @media (max-width: 640px) {
+      .hero-atmosphere .glow { filter: blur(55px); }
+    }
     @media (prefers-reduced-motion: reduce) { .atmosphere-parallax { transition: none; } }
     /* Solo de esta versión: texto de apoyo y sala de espera del paso 01 */
     .title-sub { margin: -28px 0 48px; max-width: 760px; color: var(--gris); font-size: 1.08rem; }
@@ -243,27 +246,34 @@
         <article class="plan reveal">
           <h3>Esencial</h3>
           <p>Para el consultorio que quiere dejar el papel y tener cada expediente en orden.</p>
+          <p class="price"><b>$29</b> / mes</p>
+          <p class="price-year">o $290 al año · ahorras $58</p>
           <a class="btn btn-full" href="#cotizar" data-plan="Esencial">Solicita tu cotización</a>
           <p class="inc">Incluye:</p>
-          <ul><li>Expediente clínico e historia médica</li><li>Odontograma digital con historial</li><li>Radiografías y fotos por paciente</li><li>Firma del paciente y del doctor</li><li>Agenda y sala de espera</li><li>Presupuestos impresos</li><li>Control de caja y cobros</li></ul>
+          <ul><li><b>1 odontólogo · 1 sede</b></li><li>Expediente clínico e historia médica</li><li>Odontograma digital con historial</li><li>Radiografías y fotos por paciente</li><li>Firma del paciente y del doctor</li><li>Agenda y sala de espera</li><li>Presupuestos impresos</li><li>Control de caja y cobros</li></ul>
         </article>
         <article class="plan plan-pro reveal">
           <span class="badge">Recomendado</span>
           <h3>Pro</h3>
           <p>Para clínicas con varios doctores que necesitan orden entre recepción, consultorio y caja.</p>
+          <p class="price"><b>$59</b> / mes</p>
+          <p class="price-year">o $590 al año · ahorras $118</p>
           <a class="btn btn-full btn-light" href="#cotizar" data-plan="Pro">Solicita tu cotización</a>
           <p class="inc">Todo lo de Esencial, más:</p>
-          <ul><li>Varios odontólogos con autorización de tratamientos</li><li>Reportes de gestión</li><li>Control de gastos</li><li>Recordatorios automáticos</li><li>Agente IA en WhatsApp</li></ul>
+          <ul><li><b>Hasta 3 odontólogos</b> (+$15/mes c/u adicional)</li><li>Autorización de tratamientos por odontólogo</li><li>Reportes de gestión</li><li>Control de gastos</li><li>Seguimiento de pacientes</li><li>Inventario y pedidos</li></ul>
         </article>
         <article class="plan reveal">
           <h3>Premium</h3>
           <p>Para clínicas con varias sedes que buscan crecer y fidelizar.</p>
+          <p class="price"><b>$99</b> / mes</p>
+          <p class="price-year">o $990 al año · ahorras $198</p>
           <a class="btn btn-full" href="#cotizar" data-plan="Premium">Solicita tu cotización</a>
           <p class="inc">Todo lo de Pro, más:</p>
-          <ul><li>Multisucursal</li><li>Seguimiento de pacientes</li><li>Inventario y pedidos</li><li>Capacitación personalizada</li><li>Soporte prioritario</li></ul>
+          <ul><li><b>Hasta 6 odontólogos · 2 sedes</b> (+$39/mes por sede adicional)</li><li>Recordatorios automáticos por WhatsApp*</li><li>Agente IA en WhatsApp*</li><li>Capacitación personalizada</li><li>Soporte prioritario</li></ul>
         </article>
       </div>
-      <p class="note reveal">Pago mensual o anual · Tarjeta y transferencia · Aplican términos y condiciones</p>
+      <p class="note reveal">Precios en USD · Pago anual: 2 meses gratis · Tarjeta y transferencia · Aplican términos y condiciones</p>
+      <p class="note note-ia reveal">*El consumo de mensajes de WhatsApp (recordatorios y Agente IA) no está incluido en el plan: la clínica lo paga directamente a Meta (API oficial de WhatsApp Business), según su uso.</p>
     </div>
   </section>
 
@@ -282,7 +292,7 @@
       </details>
       <details>
         <summary>¿Cuánto cuesta InciSoft?</summary>
-        <p>El precio depende del plan y del número de odontólogos. <a href="#cotizar">Solicita una cotización</a> o <a href="https://wa.me/50370000000">escríbenos por WhatsApp</a> para recibirla el mismo día.</p>
+        <p>Esencial cuesta $29 al mes, Pro $59 y Premium $99 (precios en USD). Si pagas el año completo, te regalamos 2 meses. El Agente IA y los recordatorios por WhatsApp vienen en Premium; el consumo de mensajes se paga aparte, directamente a Meta. <a href="#cotizar">Solicita una cotización</a> o <a href="https://wa.me/50370000000">escríbenos por WhatsApp</a> para recibirla el mismo día.</p>
       </details>
       <details>
         <summary>¿Necesito instalar algún programa?</summary>
@@ -378,6 +388,25 @@
   </div>
 </footer>
 
+<div class="bot">
+  <section class="bot-panel" id="bot-panel" role="dialog" aria-label="Asistente de InciSoft" hidden>
+    <header class="bot-head">
+      <span class="bot-avatar" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-diente"/></svg></span>
+      <div><b>Asistente InciSoft</b><span class="bot-status">En línea · responde al instante</span></div>
+      <button type="button" class="bot-close" aria-label="Cerrar chat"><svg viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </header>
+    <div class="bot-log" aria-live="polite"></div>
+    <p class="bot-label">Preguntas sugeridas</p>
+    <div class="bot-chips" aria-label="Preguntas sugeridas"></div>
+    <form class="bot-form"><input name="q" maxlength="200" autocomplete="off" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta"><button type="submit" aria-label="Enviar"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.4 20.4 21 12 3.4 3.6 3.4 10l12.6 2-12.6 2z"/></svg></button></form>
+    <a class="bot-wa" href="https://wa.me/50370000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20InciSoft" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg> ¿Prefieres hablar con una persona? WhatsApp</a>
+  </section>
+  <button type="button" class="bot-toggle" aria-controls="bot-panel" aria-expanded="false" aria-label="Abrir asistente de preguntas frecuentes">
+    <svg class="ico-chat" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5h16v11H9l-5 4V5Z"/><path stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M8 10.5h.01M12 10.5h.01M16 10.5h.01"/></svg>
+    <svg class="ico-x" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</div>
+
 <a class="wa-float" href="https://wa.me/50370000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20InciSoft" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></a>
 
 <!-- Íconos -->
@@ -430,6 +459,7 @@
 </svg>
 
 <script src="js/main.js" defer></script>
-<script src="js/hero-atmosphere.js?v=reminders-20" defer></script>
+<script src="js/chatbot.js" defer></script>
+<script src="js/hero-atmosphere.js?v=ascii-lite-21" defer></script>
 </body>
 </html>
