@@ -1,6 +1,6 @@
 // Chequeo de los límites del chat: node test.js
 const assert = require('node:assert');
-const { permitir, limpiar, validarLead, PROMPT } = require('./server.js');
+const { permitir, limpiar, validarLead, PROMPT, versionar } = require('./server.js');
 
 const t = Date.UTC(2026, 0, 1, 12);
 for (let i = 0; i < 20; i++) assert.ok(permitir('a', t));
@@ -24,3 +24,6 @@ console.log('ok');
 assert.strictEqual(validarLead(JSON.stringify({ nombre: 'A', telefono: '72682797', clinica: 'S', interes: 'plan a la medida' })).interes, 'plan a la medida');
 assert.ok(PROMPT.includes('Hasta 8 doctores activos') && !/hasta 6 odont/i.test(PROMPT), 'planes nuevos en el contexto');
 console.log('ok planes');
+const v = versionar('<link href="css/styles.css"><script src="js/chatbot.js"></script><script src="js/hero.js?v=x"></script><a href="https://wa.me/1">');
+assert.ok(/css\/styles\.css\?v=\w+"/.test(v) && /js\/chatbot\.js\?v=\w+"/.test(v) && v.includes('hero.js?v=x"') && v.includes('wa.me/1"'), 'versiona JS/CSS locales');
+console.log('ok cache');

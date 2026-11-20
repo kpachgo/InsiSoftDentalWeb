@@ -119,13 +119,13 @@ async function chat(req, res) {
     const llamada = msg.tool_calls?.find(t => t.function?.name === 'registrar_interesado');
     if (llamada) {
       const lead = validarLead(llamada.function.arguments);
-      if (!lead) return json(res, 200, { reply: 'Para que un asesor te contacte necesito tu nombre, tu teléfono o WhatsApp y el nombre de tu clínica. ¿Me los compartes?' });
-      return json(res, 200, { lead, reply: `¡Listo, ${lead.nombre}! Ya pasé tus datos al equipo de ventas: te contactarán muy pronto al ${lead.telefono} para tu ${lead.interes}. ¿Te ayudo con algo más mientras tanto?` });
+      if (!lead) return json(res, 200, { reply: 'Para que el equipo de ventas te contacte necesito tu nombre, un teléfono o WhatsApp y el nombre de tu clínica. ¿Me los compartes?' });
+      return json(res, 200, { lead, reply: `Listo, ${lead.nombre}. Registré tu solicitud de ${lead.interes} para ${lead.clinica}; el equipo de ventas te contactará muy pronto al ${lead.telefono}. Muchas gracias por tu interés, que tengas un buen día 😊` });
     }
-    json(res, 200, { reply: (msg.content || '').trim() || 'Perdona, ¿me lo repites con otras palabras?' });
+    json(res, 200, { reply: (msg.content || '').trim() || 'Disculpa, ¿me lo podrías decir con otras palabras?' });
   } catch (e) {
     console.error(e.message);
-    json(res, 502, { reply: 'Tuve un problema para responder. Escríbenos por WhatsApp al 7268-2797 y te atendemos.' });
+    json(res, 502, { reply: 'Disculpa, tuve un problema para responder. Escríbenos por WhatsApp al 7268-2797 y te atendemos.' });
   }
 }
 
@@ -144,9 +144,14 @@ function estatico(req, res) {
   fs.readFile(archivo, (err, data) => {
     if (err) { res.writeHead(404); return res.end('No encontrado'); }
     res.writeHead(200, { 'Content-Type': tipo });
-    res.end(data);
+    res.end(tipo.startsWith('text/html') ? versionar(data.toString()) : data);
   });
 }
+
+// Cloudflare guarda JS y CSS 4 horas. Cada deploy les agrega ?v=<deploy> en el HTML (que no se cachea),
+// así los visitantes reciben la versión nueva al instante. Los que ya traen ?v= se respetan.
+const VERSION = (process.env.RAILWAY_DEPLOYMENT_ID || String(Date.now())).slice(0, 8);
+const versionar = (html) => html.replace(/((?:src|href)="(?:js|css)\/[^"?]+\.(?:js|css))"/g, `$1?v=${VERSION}"`);
 
 const server = http.createServer((req, res) => {
   if (req.url === '/api/chat') {
@@ -158,4 +163,4 @@ const server = http.createServer((req, res) => {
 });
 
 if (require.main === module) server.listen(PORT, () => console.log(`Escuchando en ${PORT}`));
-module.exports = { permitir, limpiar, validarLead, PROMPT };
+module.exports = { permitir, limpiar, validarLead, PROMPT, versionar };

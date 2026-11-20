@@ -5,7 +5,7 @@ if (bot) {
   const log = bot.querySelector('.bot-log');
   const form = bot.querySelector('.bot-form');
   const send = form.querySelector('button[type="submit"]');
-  const SALUDO = '¡Hola! 👋 Soy el asistente de InciSoft. ¿En qué te puedo ayudar?';
+  const SALUDO = 'Hola 😊 Soy el asistente de InciSoft Dental. ¿Tu clínica todavía lleva expedientes en papel o Excel? Te cuento cómo tenerlo todo en un solo lugar. ¿Qué te gustaría saber?';
   const historial = []; // el saludo no va: si no, la IA cree que ya habló y dice "hola de nuevo"
   let leadEnviado = false;
 
@@ -17,11 +17,24 @@ if (bot) {
     log.scrollTop = log.scrollHeight;
   };
 
+  // Los tres puntitos de "escribiendo…".
+  const escribiendo = () => {
+    const typing = document.createElement('p');
+    typing.className = 'bot-msg el bot-typing';
+    typing.setAttribute('aria-label', 'Escribiendo');
+    for (let i = 0; i < 3; i++) typing.append(document.createElement('i'));
+    log.append(typing);
+    log.scrollTop = log.scrollHeight;
+    return typing;
+  };
+
   const setOpen = (open) => {
     panel.hidden = !open;
     toggle.setAttribute('aria-expanded', String(open));
+    // El saludo "llega" tras un momento escribiendo, como un mensaje real, en vez de estar ya pegado.
     if (open && !log.childElementCount) {
-      say(SALUDO, 'el ia');
+      const typing = escribiendo();
+      setTimeout(() => { typing.remove(); if (!log.querySelector('.bot-msg')) say(SALUDO, 'el ia'); }, 1100);
     }
     if (open) form.elements.q.focus();
   };
@@ -58,13 +71,8 @@ if (bot) {
     form.reset();
     send.disabled = true;
     say(text, 'yo');
-
-    const typing = document.createElement('p');
-    typing.className = 'bot-msg el bot-typing';
-    typing.setAttribute('aria-label', 'Escribiendo');
-    for (let i = 0; i < 3; i++) typing.append(document.createElement('i'));
-    log.append(typing);
-    log.scrollTop = log.scrollHeight;
+    log.querySelector('.bot-typing')?.remove(); // si escribe antes de que llegue el saludo, solo un indicador
+    const typing = escribiendo();
 
     try {
       const res = await fetch('/api/chat', {
@@ -85,7 +93,7 @@ if (bot) {
           await registrarLead(data.lead);
           leadEnviado = true;
         } catch {
-          reply = 'No pude registrar tus datos. Escríbenos por WhatsApp al 7268-2797 y te atendemos de inmediato.';
+          reply = 'Disculpa, no pude registrar tus datos. Escríbenos por WhatsApp al 7268-2797 y te atendemos de inmediato.';
         }
       }
       typing.remove();
