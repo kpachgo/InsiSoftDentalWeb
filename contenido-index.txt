@@ -207,10 +207,14 @@ Plan Esencial
 Descripción:
 Para el consultorio que quiere dejar el papel y tener cada expediente en orden.
 
+Precio:
+$29 / mes · o $290 al año (ahorras $58)
+
 Botón:
 Solicita tu cotización
 
 Incluye:
+- 1 odontólogo · 1 sede
 - Expediente clínico e historia médica
 - Odontograma digital con historial
 - Radiografías y fotos por paciente
@@ -226,32 +230,40 @@ Recomendado
 Descripción:
 Para clínicas con varios doctores que necesitan orden entre recepción, consultorio y caja.
 
+Precio:
+$59 / mes · o $590 al año (ahorras $118)
+
 Botón:
 Solicita tu cotización
 
 Incluye todo lo de Esencial, más:
-- Varios odontólogos con autorización de tratamientos
+- Hasta 3 odontólogos (+$15/mes c/u adicional)
+- Autorización de tratamientos por odontólogo
 - Reportes de gestión
 - Control de gastos
-- Recordatorios automáticos
-- Agente IA en WhatsApp
+- Seguimiento de pacientes
+- Inventario y pedidos
 
 Plan Premium
 Descripción:
 Para clínicas con varias sedes que buscan crecer y fidelizar.
 
+Precio:
+$99 / mes · o $990 al año (ahorras $198)
+
 Botón:
 Solicita tu cotización
 
 Incluye todo lo de Pro, más:
-- Multisucursal
-- Seguimiento de pacientes
-- Inventario y pedidos
+- Hasta 6 odontólogos · 2 sedes (+$39/mes por sede adicional)
+- Recordatorios automáticos por WhatsApp*
+- Agente IA en WhatsApp*
 - Capacitación personalizada
 - Soporte prioritario
 
 Nota:
-Pago mensual o anual · Tarjeta y transferencia · Aplican términos y condiciones
+Precios en USD · Pago anual: 2 meses gratis · Tarjeta y transferencia · Aplican términos y condiciones
+*El consumo de mensajes de WhatsApp (recordatorios y Agente IA) no está incluido en el plan: la clínica lo paga directamente a Meta (API oficial de WhatsApp Business), según su uso.
 
 
 8. PREGUNTAS FRECUENTES
@@ -279,7 +291,7 @@ El expediente y mucho más, todo listo para imprimir o guardar en PDF:
 No. Funciona desde el navegador en computadora, tablet o celular, incluso en equipos con varios años de uso. Solo necesitas internet.
 
 ¿Cuánto cuesta InciSoft?
-Depende del plan y del número de odontólogos. Llena el formulario o escríbenos por WhatsApp y te enviamos tu cotización el mismo día.
+Esencial cuesta $29 al mes, Pro $59 y Premium $99 (precios en USD). Si pagas el año completo, te regalamos 2 meses. El Agente IA y los recordatorios por WhatsApp vienen en Premium; el consumo de mensajes se paga aparte, directamente a Meta. Llena el formulario o escríbenos por WhatsApp y te enviamos tu cotización el mismo día.
 
 
 9. CONTACTO Y COTIZACIÓN

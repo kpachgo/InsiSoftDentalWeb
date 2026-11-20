@@ -9,6 +9,7 @@
   const mouseVariant = hero.dataset.background === 'mouse'
     || new URLSearchParams(window.location.search).get('fondo') === 'mouse';
   const fixedCircle = hero.dataset.background === 'breathe';
+  const compactScreen = window.matchMedia('(max-width: 640px)');
   const animations = [];
   const random = (min, max) => min + Math.random() * (max - min);
 
@@ -29,7 +30,7 @@
   }
 
   // Grayscale drawings provide actual filled surfaces, highlights and recesses.
-  const views = ['tooth', 'teeth', 'record', 'payments', 'signature', 'clinics', 'calendar', 'reminders'].map(view => {
+  const views = ['tooth', 'record', 'payments', 'signature'].map(view => {
     const surface = document.createElement('canvas');
     surface.width = surface.height = 240;
     const pen = surface.getContext('2d');
@@ -412,9 +413,11 @@
   });
 
   const sphere = [];
-  for (let latitude = 1; latitude < 42; latitude++) {
-    const phi = latitude / 42 * Math.PI;
-    const samples = Math.max(12, Math.round(130 * Math.sin(phi)));
+  const sphereLatitudes = compactScreen.matches ? 25 : 42;
+  const sphereResolution = compactScreen.matches ? 76 : 130;
+  for (let latitude = 1; latitude < sphereLatitudes; latitude++) {
+    const phi = latitude / sphereLatitudes * Math.PI;
+    const samples = Math.max(12, Math.round(sphereResolution * Math.sin(phi)));
     for (let longitude = 0; longitude < samples; longitude++) {
       sphere.push({ phi, theta: longitude / samples * Math.PI * 2 });
     }
@@ -492,7 +495,9 @@
     const tilt = Math.sin(time * .22) * .055;
     context.font = '10px "Courier New", monospace';
 
-    shapes[current].forEach((source, index) => {
+    const stride = compactScreen.matches ? 2 : 1;
+    for (let index = 0; index < shapes[current].length; index += stride) {
+      const source = shapes[current][index];
       const point = current === 0 ? projectSphere(source, sourceTime) : source;
       const target = next === 0
         ? projectSphere(shapes[next][index], targetTime)
@@ -522,14 +527,14 @@
         context.fillStyle = `rgba(224,245,255,${target.brightness * blend * opacity})`;
         context.fillText(target.glyph, px, py);
       }
-    });
+    }
 
   }
 
   function resizeBubble() {
     width = atmosphere.clientWidth;
     height = atmosphere.clientHeight;
-    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    const ratio = Math.min(window.devicePixelRatio || 1, compactScreen.matches ? 1 : 1.5);
     ascii.width = Math.round(width * ratio);
     ascii.height = Math.round(height * ratio);
     context.setTransform(ratio, 0, 0, ratio, 0, 0);
@@ -545,7 +550,9 @@
     const textBounds = hero.querySelector('.hero-txt').getBoundingClientRect();
     const backgroundBounds = atmosphere.getBoundingClientRect();
     const centerX = fixedCircle
-      ? textBounds.left - backgroundBounds.left + textBounds.width * .1
+      ? compactScreen.matches
+        ? width * .78
+        : textBounds.left - backgroundBounds.left + textBounds.width * .1
       : width * (.22 + Math.sin(time * .085) * .1);
     const centerY = fixedCircle
       ? textBounds.top - backgroundBounds.top + textBounds.height * .48
@@ -558,9 +565,11 @@
     const breath = fixedCircle ? 1 : 1 + Math.sin(time * .23) * .12;
 
     // Project a rotating sphere of ASCII characters with a softly rippling surface.
-    for (let latitude = 1; latitude < 28; latitude++) {
-      const phi = latitude / 28 * Math.PI;
-      const samples = Math.max(8, Math.round(90 * Math.sin(phi)));
+    const latitudes = compactScreen.matches ? 17 : 28;
+    const resolution = compactScreen.matches ? 54 : 90;
+    for (let latitude = 1; latitude < latitudes; latitude++) {
+      const phi = latitude / latitudes * Math.PI;
+      const samples = Math.max(8, Math.round(resolution * Math.sin(phi)));
       for (let longitude = 0; longitude < samples; longitude++) {
         const theta = longitude / samples * Math.PI * 2;
         const ripple = fixedCircle ? 1 : 1 + .065 * Math.sin(phi * 4 + theta * 3 + time * .6);
@@ -584,7 +593,7 @@
   function animateBubble(now) {
     frame = 0;
     if (!visible || reducedMotion.matches) return;
-    if (now - lastPaint > 40) {
+    if (now - lastPaint > (compactScreen.matches ? 66 : 40)) {
       paintBubble(now / 1000);
       lastPaint = now;
     }
