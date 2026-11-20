@@ -214,7 +214,7 @@ Botón:
 Solicita tu cotización
 
 Incluye:
-- 1 odontólogo · 1 sede
+- Hasta 2 doctores activos · 1 sede
 - Expediente clínico e historia médica
 - Odontograma digital con historial
 - Radiografías y fotos por paciente
@@ -237,7 +237,7 @@ Botón:
 Solicita tu cotización
 
 Incluye todo lo de Esencial, más:
-- Hasta 3 odontólogos (+$15/mes c/u adicional)
+- Hasta 4 doctores activos · 1 sede
 - Autorización de tratamientos por odontólogo
 - Reportes de gestión
 - Control de gastos
@@ -255,11 +255,19 @@ Botón:
 Solicita tu cotización
 
 Incluye todo lo de Pro, más:
-- Hasta 6 odontólogos · 2 sedes (+$39/mes por sede adicional)
+- Hasta 8 doctores activos · 2 sedes (+$39/mes por sede adicional)
 - Recordatorios automáticos por WhatsApp*
 - Agente IA en WhatsApp*
 - Capacitación personalizada
 - Soporte prioritario
+
+Nota sobre doctores activos:
+Cuentan solo los doctores activos: si alguien deja la clínica, lo das de baja y registras a otro sin costo. Doctor activo adicional: +$15/mes c/u en todos los planes.
+
+Plan a la medida:
+¿Necesitas algo distinto? Plan a la medida
+Combina funciones como Esencial con inventario o amplía la capacidad para más de 8 doctores y varias sedes. Te preparamos un presupuesto personalizado.
+Botón: Solicita tu cotización (lleva al formulario). Precio por cotización.
 
 Nota:
 Precios en USD · Pago anual: 2 meses gratis · Tarjeta y transferencia · Aplican términos y condiciones
@@ -269,7 +277,7 @@ Precios en USD · Pago anual: 2 meses gratis · Tarjeta y transferencia · Aplic
 8. PREGUNTAS FRECUENTES
 
 ¿InciSoft sirve para mi consultorio, clínica o centro odontológico?
-Sí, desde el más pequeño hasta el más grande. El plan Esencial está pensado para el consultorio de un odontólogo, Pro para clínicas con varios doctores y Premium para centros odontológicos con varias sedes y equipos completos.
+Sí, desde el más pequeño hasta el más grande. Esencial incluye hasta 2 doctores activos y 1 sede; Pro, hasta 4 doctores activos y 1 sede; Premium, hasta 8 doctores activos y 2 sedes. Si necesitas otra combinación de funciones o más capacidad, pide un plan a la medida.
 
 ¿Cómo trabaja cada persona del equipo?
 Cada quien entra con su usuario y ve solo la parte del programa que le toca. Toda la clínica trabaja sobre el mismo expediente: lo que uno registra le llega al siguiente, sin volver a escribir los datos.
@@ -291,7 +299,7 @@ El expediente y mucho más, todo listo para imprimir o guardar en PDF:
 No. Funciona desde el navegador en computadora, tablet o celular, incluso en equipos con varios años de uso. Solo necesitas internet.
 
 ¿Cuánto cuesta InciSoft?
-Esencial cuesta $29 al mes, Pro $59 y Premium $99 (precios en USD). Si pagas el año completo, te regalamos 2 meses. El Agente IA y los recordatorios por WhatsApp vienen en Premium; el consumo de mensajes se paga aparte, directamente a Meta. Llena el formulario o escríbenos por WhatsApp y te enviamos tu cotización el mismo día.
+Esencial cuesta $29 al mes ($290 al año), Pro $59 ($590 al año) y Premium $99 ($990 al año), en USD. Cada doctor activo adicional cuesta $15 al mes en todos los planes; en Premium, cada sede adicional cuesta $39 al mes. El plan a la medida se cotiza según lo que necesites. El Agente IA y los recordatorios por WhatsApp vienen en Premium; el consumo de mensajes se paga aparte, directamente a Meta. Llena el formulario o escríbenos por WhatsApp y te enviamos tu cotización el mismo día.
 
 
 9. CONTACTO Y COTIZACIÓN
@@ -341,6 +349,7 @@ Campos del formulario:
   - Esencial
   - Pro
   - Premium
+  - A la medida
 - Comentarios
   Placeholder: Cuéntanos qué necesitas o cualquier duda sobre tu cotización
 - Acepto que InciSoft me contacte por teléfono, WhatsApp o correo para enviarme la cotización.

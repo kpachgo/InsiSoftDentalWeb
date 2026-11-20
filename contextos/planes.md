@@ -10,6 +10,8 @@ Definidos el 2026-11-19. Publicados en `index.html` (sección `#planes` y FAQ "�
 | Pro (recomendado) | $59 | $590 | $118 |
 | Premium | $99 | $990 | $198 |
 
+**Plan a la medida:** presupuesto personalizado, sin precio publicado. Para clínicas que necesitan otra combinación de funciones (por ejemplo, Esencial con inventario) o más de 8 doctores activos y varias sedes.
+
 - Anual = 10 meses (2 meses gratis, ~17% de descuento).
 - Pago con tarjeta y transferencia. Aplican términos y condiciones.
 
@@ -17,16 +19,19 @@ Definidos el 2026-11-19. Publicados en `index.html` (sección `#planes` y FAQ "�
 
 | | Esencial | Pro | Premium |
 |---|---|---|---|
-| Odontólogos incluidos | 1 | hasta 3 | hasta 6 |
-| Odontólogo adicional | — | +$15/mes c/u | sin definir (pendiente) |
+| Doctores activos incluidos | hasta 2 | hasta 4 | hasta 8 |
+| Doctor activo adicional | +$15/mes c/u | +$15/mes c/u | +$15/mes c/u |
 | Sedes | 1 | 1 | 2 |
 | Sede adicional | — | — | +$39/mes c/u |
 
+Solo cuentan los doctores activos: si uno deja la clínica, se da de baja y se registra otro sin costo extra.
+
 ## Qué incluye cada plan
 
-- **Esencial:** expediente clínico e historia médica, odontograma digital con historial, radiografías y fotos, firma del paciente y del doctor, agenda y sala de espera, presupuestos impresos, control de caja y cobros. **Nunca lleva Seguimiento.**
+- **Esencial estándar:** expediente clínico e historia médica, odontograma digital con historial, radiografías y fotos, firma del paciente y del doctor, agenda y sala de espera, presupuestos impresos, control de caja y cobros. No incluye Seguimiento.
 - **Pro:** todo lo de Esencial + autorización de tratamientos por odontólogo, reportes de gestión, control de gastos, seguimiento de pacientes, inventario y pedidos.
 - **Premium:** todo lo de Pro + multisucursal, recordatorios automáticos por WhatsApp*, Agente IA en WhatsApp*, capacitación personalizada, soporte prioritario.
+- **A la medida:** módulos y capacidad según cotización; por ejemplo, Esencial con inventario o una clínica de mayor tamaño.
 
 ## Vistas por plan (app `clinicaElectron`, panel Super Admin > Planes)
 
@@ -57,6 +62,7 @@ Limitaciones actuales de la app:
 
 Pendientes:
 - El costo del modelo de IA (si el agente usa uno) lo paga InciSoft, no Meta, y no está cubierto por la nota.
+- Plan a la medida: la app hoy bloquea vistas por plan (tenant.VISTA_DE_RUTA); para combinaciones a la medida hay que poder activar módulos por clínica.
 
 ## Por qué estos precios (competencia, nov 2026)
 

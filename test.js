@@ -21,3 +21,6 @@ assert.strictEqual(validarLead('no es json'), null);
 assert.strictEqual(validarLead(JSON.stringify({ nombre: 'A', telefono: '72682797', clinica: 'S', interes: 'otro' })).interes, 'cotización');
 assert.ok(!PROMPT.includes('<!--') && PROMPT.includes('# QUIÉN ERES') && PROMPT.includes('{HOY}'), 'contexto cargado sin notas');
 console.log('ok');
+assert.strictEqual(validarLead(JSON.stringify({ nombre: 'A', telefono: '72682797', clinica: 'S', interes: 'plan a la medida' })).interes, 'plan a la medida');
+assert.ok(PROMPT.includes('Hasta 8 doctores activos') && !/hasta 6 odont/i.test(PROMPT), 'planes nuevos en el contexto');
+console.log('ok planes');

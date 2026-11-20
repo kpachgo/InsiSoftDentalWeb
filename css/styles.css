@@ -180,6 +180,11 @@ h1 strong { background: linear-gradient(90deg, var(--acento), var(--azul)); -web
 .plans .plan.visible li:nth-child(8) { animation-delay: .28s; }
 @keyframes plan-feature-in { from { opacity: .35; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
 .note { margin-top: 32px; text-align: center; color: var(--gris); font-size: .92rem; }
+.plan-medida { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 24px; padding: 24px; border: 1px solid var(--borde); border-radius: var(--r); background: var(--suave); }
+.plan-medida h3 { font-size: 1.2rem; }
+.plan-medida p { margin-top: 4px; color: var(--gris); }
+.plan-medida .btn { flex: none; }
+@media (max-width: 640px) { .plan-medida { flex-direction: column; align-items: flex-start; } }
 
 /* FAQ */
 details { background: #fff; border: 1px solid var(--borde); border-radius: 16px; margin-bottom: 12px; transition: box-shadow .3s; }
